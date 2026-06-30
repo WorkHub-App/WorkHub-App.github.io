@@ -3,459 +3,465 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WorkHub — CRM для малого бізнесу та фрілансерів</title>
-<meta name="description" content="WorkHub — десктопна CRM для фрілансерів, бухгалтерів, салонів краси та SMM. Клієнти, рахунки, задачі, каса, зарплата, ПРРО — все в одному застосунку.">
+<title>WorkHub — Робоча область для вашого бізнесу</title>
+<meta name="description" content="WorkHub — десктопний застосунок що замінює 10 окремих сервісів. Клієнти, фінанси, команда, документи, розклад — в одному місці. Для фрілансерів, агентств, ФОП і салонів.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%235B8DEF%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22800%22>W</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%237C5CFC%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22800%22>W</text></svg>">
 </head>
 <body>
 
-<!-- ───────── NAV ───────── -->
+<!-- ── NAV ── -->
 <header class="nav">
   <div class="container nav-inner">
-    <div class="brand"><span class="brand-icon">W</span>WorkHub</div>
+    <div class="brand">
+      <div class="brand-logo">W</div>
+      WorkHub
+    </div>
     <nav class="nav-links">
-      <a href="#features" data-nav="features">Можливості</a>
-      <a href="#pricing" data-nav="pricing">Тарифи</a>
-      <a href="#faq" data-nav="faq">Питання</a>
+      <a href="#features">Можливості</a>
+      <a href="#pricing">Тарифи</a>
+      <a href="#faq">Питання</a>
     </nav>
-    <a href="https://github.com/Pavlo554/workhub/releases/latest" id="dl-win-nav" class="btn btn-primary btn-sm">Скачати безкоштовно</a>
+    <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav">Скачати безкоштовно</a>
   </div>
 </header>
 
-<!-- ───────── HERO ───────── -->
+<!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-glow"></div>
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+  </div>
   <div class="container hero-inner">
-    <div class="hero-text">
-      <div class="badge"><span class="badge-dot"></span>Десктоп-застосунок · Windows / Linux</div>
-      <h1>Один застосунок<br>замість <span class="grad-text">десяти вкладок</span></h1>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Десктоп-застосунок · Windows · Linux
+      </div>
+      <h1>
+        Ваш бізнес.<br>
+        <span class="grad-text">Одна вкладка.</span>
+      </h1>
       <p class="hero-sub">
-        CRM для фрілансерів, бухгалтерів, салонів краси та SMM-агенцій.
-        Клієнти, рахунки, задачі, каса, зарплата, ПРРО — усе в одному місці,
-        без хмарних обмежень і щомісячних сюрпризів.
+        WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.
       </p>
       <div class="hero-actions">
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" id="dl-win-hero" class="btn btn-primary btn-lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
           Скачати для Windows
         </a>
-        <a href="#features" class="btn btn-ghost btn-lg">Подивитись можливості</a>
+        <a href="#features" class="btn btn-ghost btn-lg">Що всередині →</a>
       </div>
       <div class="hero-trust">
-        <span>✓ Безкоштовний план назавжди</span>
-        <span>✓ Дані локально + хмарний бекап</span>
-        <span>✓ Українською</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Безкоштовний план назавжди</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Дані у вашій хмарі</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Повністю українською</span>
       </div>
     </div>
 
-    <div class="hero-mock">
+    <div class="hero-visual">
       <div class="mock-window">
-        <div class="mock-titlebar"><span></span><span></span><span></span></div>
-        <img class="mock-shot" src="photo_2026-06-28_00-09-20.jpg" alt="Дашборд WorkHub — клієнти, дохід, рахунки та задачі в одному вікні">
+        <div class="mock-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-url">WorkHub</div>
+        </div>
+        <img src="photo_2026-06-28_00-09-20.jpg" alt="Дашборд WorkHub" class="mock-img">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ───────── LOGOS / NICHES ───────── -->
-<section class="niches">
+<!-- ── NICHES ── -->
+<div class="niches-strip">
   <div class="container">
-    <p class="niches-label">Підходить для будь-якої справи</p>
+    <p class="niches-label">Для всіх хто веде власну справу</p>
     <div class="niches-row">
-      <div class="niche-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 17h20M8 21h8"/></svg>Фрілансери</div>
-      <div class="niche-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg>Бухгалтери / ФОП</div>
-      <div class="niche-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>SMM / Маркетологи</div>
-      <div class="niche-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Салони краси</div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Фрілансери
+      </div>
+      <div class="niche-sep"></div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg>
+        Бухгалтери / ФОП
+      </div>
+      <div class="niche-sep"></div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        IT-агенції
+      </div>
+      <div class="niche-sep"></div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5z"/></svg>
+        Салони краси
+      </div>
+      <div class="niche-sep"></div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
+        SMM-агенції
+      </div>
+      <div class="niche-sep"></div>
+      <div class="niche">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
+        Ательє / Студії
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ───────── FEATURES ───────── -->
+<!-- ── FEATURES ── -->
 <section class="section" id="features">
   <div class="container">
     <div class="section-head">
       <div class="section-tag">МОЖЛИВОСТІ</div>
-      <h2>29 модулів — підключай тільки потрібні</h2>
-      <p class="section-sub">Не переплачуй за функції які не використовуєш. Обери модулі під свою нішу під час реєстрації.</p>
+      <h2>Все що потрібно — вже всередині</h2>
+      <p class="section-sub">29+ модулів, що підключаються під вашу нішу автоматично. Зайве — вимикається в один клік.</p>
     </div>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(91,141,239,.12);color:#5B8DEF">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Клієнти та CRM</h3>
-        <p>Картки клієнтів, історія спілкування, джерела залучення, аналітика по доходу та конверсії.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(52,211,153,.12);color:#34D399">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-        </div>
-        <h3>Рахунки та договори</h3>
-        <p>Генерація PDF, оплата карткою (AIFO), криптою чи переказом. Автоматичний облік оплачено/очікує.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(251,191,36,.12);color:#FBBF24">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <h3>Задачі та Kanban</h3>
-        <p>Пріоритети, дедлайни, прикріплення скріншотів прямо з буфера обміну (Ctrl+V).</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(167,139,250,.12);color:#A78BFA">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
-        </div>
-        <h3>Каса, Банк, Зарплата</h3>
-        <p>ПКО/РКО з ПДВ та акцизом, кілька банківських рахунків, нарахування ЗП з автоматичним ПДФО/ЄСВ.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(244,114,182,.12);color:#F472B6">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h11l5 5v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M14.5 2v5h5"/><path d="M8 13h8M8 17h5"/></svg>
-        </div>
-        <h3>ПРРО та податки</h3>
-        <p>Фіскальні чеки, зміни, Z-звіти. Податковий календар з нагадуваннями та розрахунком ЄСВ/ВЗ.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" style="background:rgba(56,189,248,.12);color:#38BDF8">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Команда та права</h3>
-        <p>Запрошуй співробітників за кодом, налаштовуй кому які модулі видно. Особові картки, накази HR.</p>
-      </div>
-    </div>
+    <div class="features-bento">
 
-    <!-- Full module directory -->
-    <div class="all-modules">
-      <div class="all-modules-head">
-        <h3>Усе, що є в застосунку — 29+ модулів</h3>
-        <p>Підключаються автоматично під обрану нішу під час реєстрації. Зайве — вимикається в один клік.</p>
+      <div class="bento-card bento-wide">
+        <div class="bento-icon" style="color:#7C5CFC">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Клієнти та воронка продажів</h3>
+        <p>Картки клієнтів, Kanban-воронка від ліда до угоди, аналітика по конверсії та доходу. Клієнтський портал — клієнт бачить свої рахунки онлайн.</p>
+        <div class="bento-tags">
+          <span>Клієнти</span><span>Воронка</span><span>Портал</span>
+        </div>
       </div>
-      <div class="module-cats">
 
-        <div class="module-cat">
-          <div class="module-cat-title">CRM і продажі</div>
-          <div class="module-chips">
-            <span class="chip">Клієнти</span><span class="chip">Аналітика клієнтів</span>
-            <span class="chip">Проекти</span><span class="chip">Kanban-дошка</span>
-            <span class="chip">Задачі</span><span class="chip">Таймер</span>
-          </div>
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#22C55E">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
         </div>
-
-        <div class="module-cat">
-          <div class="module-cat-title">Фінанси</div>
-          <div class="module-chips">
-            <span class="chip">Рахунки</span><span class="chip">Договори</span>
-            <span class="chip">Фінанси (мультивалюта)</span><span class="chip">Каса</span>
-            <span class="chip">Банк</span><span class="chip">Конвертер валют</span>
-            <span class="chip">Календар платежів</span>
-          </div>
-        </div>
-
-        <div class="module-cat">
-          <div class="module-cat-title">ФОП і звітність</div>
-          <div class="module-chips">
-            <span class="chip">Зарплата (ПДФО/ЄСВ)</span><span class="chip">ПРРО</span>
-            <span class="chip">Податковий календар</span><span class="chip">Звіти</span>
-          </div>
-        </div>
-
-        <div class="module-cat">
-          <div class="module-cat-title">Під вашу нішу</div>
-          <div class="module-chips">
-            <span class="chip">Записи клієнтів</span><span class="chip">Послуги</span>
-            <span class="chip">Склад</span><span class="chip">Контент-план</span>
-            <span class="chip">Портфоліо</span><span class="chip">Акаунти соцмереж</span>
-          </div>
-        </div>
-
-        <div class="module-cat">
-          <div class="module-cat-title">Команда і безпека</div>
-          <div class="module-chips">
-            <span class="chip">Команда / запрошення</span><span class="chip">Персонал (HR)</span>
-            <span class="chip">Паролі</span><span class="chip">API та інтеграції</span>
-            <span class="chip">2FA (Google Authenticator)</span>
-          </div>
-        </div>
-
-        <div class="module-cat">
-          <div class="module-cat-title">Сервіс</div>
-          <div class="module-chips">
-            <span class="chip">Документи</span><span class="chip">Нотатки</span>
-            <span class="chip">Шаблони документів</span><span class="chip">Підтримка</span>
-            <span class="chip">FAQ</span>
-          </div>
-        </div>
-
+        <h3>Рахунки та фінанси</h3>
+        <p>PDF-рахунки, оплата карткою або крипто. Повторювані рахунки — генеруються автоматично. Нагадування клієнту якщо не оплатив.</p>
+        <div class="bento-tags"><span>PRO</span></div>
       </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#F59E0B">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Задачі та проекти</h3>
+        <p>Kanban-дошка, дедлайни, пріоритети, таймер робочого часу. Вставка скріншотів прямо з буфера (Ctrl+V).</p>
+      </div>
+
+      <div class="bento-card bento-wide">
+        <div class="bento-icon" style="color:#38BDF8">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+        </div>
+        <h3>Каса, банк і зарплата</h3>
+        <p>ПКО/РКО з ПДВ та акцизом, кілька банківських рахунків, нарахування зарплати з автоматичним розрахунком ПДФО і ЄСВ. ПРРО для фіскальних чеків і Z-звітів.</p>
+        <div class="bento-tags">
+          <span>Каса</span><span>Банк</span><span>Зарплата</span><span>ПРРО</span>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#F472B6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Онлайн-запис для салонів</h3>
+        <p>Клієнт сам бронює час за посиланням. Ви налаштовуєте робочі години і отримуєте запис в розкладі.</p>
+        <div class="bento-tags"><span>Салони краси</span></div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#A78BFA">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Команда та права доступу</h3>
+        <p>Запрошуй співробітників, обирай кому які модулі видно. Облік персоналу, накази HR, особові картки.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ───────── HOW IT WORKS ───────── -->
-<section class="section section-alt">
+<!-- ── MODULE LIST ── -->
+<section class="section section-dim">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">МОДУЛІ</div>
+      <h2>29+ модулів в одному застосунку</h2>
+      <p class="section-sub">Підключаються автоматично під обрану нішу. Непотрібні — вимкнені за замовчуванням.</p>
+    </div>
+    <div class="module-grid">
+
+      <div class="module-col">
+        <div class="module-col-title">Бізнес та клієнти</div>
+        <ul>
+          <li>Клієнти</li>
+          <li>Воронка продажів</li>
+          <li>Проекти</li>
+          <li>Задачі</li>
+          <li>Таймер</li>
+          <li>Нотатки</li>
+          <li>Шаблони документів</li>
+        </ul>
+      </div>
+
+      <div class="module-col">
+        <div class="module-col-title">Фінанси</div>
+        <ul>
+          <li>Рахунки (PDF + email)</li>
+          <li>Повторювані рахунки</li>
+          <li>Договори</li>
+          <li>Фінанси</li>
+          <li>Каса (ПКО/РКО)</li>
+          <li>Банк</li>
+          <li>Конвертер валют</li>
+          <li>Календар платежів</li>
+        </ul>
+      </div>
+
+      <div class="module-col">
+        <div class="module-col-title">ФОП і звіти</div>
+        <ul>
+          <li>Зарплата (ПДФО/ЄСВ)</li>
+          <li>ПРРО</li>
+          <li>Податковий календар</li>
+          <li>Аналітика бізнесу</li>
+          <li>Квартальні звіти</li>
+        </ul>
+      </div>
+
+      <div class="module-col">
+        <div class="module-col-title">Спеціалізовані</div>
+        <ul>
+          <li>Розклад та записи</li>
+          <li>Онлайн-бронювання</li>
+          <li>Послуги</li>
+          <li>Склад</li>
+          <li>Контент-план (SMM)</li>
+          <li>Портфоліо</li>
+          <li>Акаунти соцмереж</li>
+        </ul>
+      </div>
+
+      <div class="module-col">
+        <div class="module-col-title">Команда і безпека</div>
+        <ul>
+          <li>Команда / HR</li>
+          <li>Персонал</li>
+          <li>Клієнтський портал</li>
+          <li>Паролі</li>
+          <li>API та інтеграції</li>
+          <li>2FA (Google Auth)</li>
+          <li>Підтримка</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section" id="how">
   <div class="container">
     <div class="section-head">
       <div class="section-tag">ЯК ЦЕ ПРАЦЮЄ</div>
       <h2>Від встановлення до першого клієнта — 2 хвилини</h2>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">01</div>
         <h3>Завантаж і встанови</h3>
-        <p>Один .exe-файл для Windows або .AppImage для Linux. Без облікового запису admin, без залежностей.</p>
+        <p>Один .exe файл. Без адмін-прав, без залежностей, без реєстрації. Просто запускаєш і працюєш.</p>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Обери нішу</h3>
-        <p>Фрілансер, бухгалтер, SMM чи салон краси — автоматично підʼєднаються потрібні модулі.</p>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <h3>Обери свою нішу</h3>
+        <p>Фрілансер, IT-агенція, бухгалтер, SMM чи салон краси — нужні модулі підключаться самі.</p>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Працюй</h3>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <h3>Починай працювати</h3>
         <p>Додай клієнта, виставь рахунок, приймай оплату. Дані синхронізуються в хмарі автоматично.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ───────── PRICING ───────── -->
-<section class="section" id="pricing">
+<!-- ── PRICING ── -->
+<section class="section section-dim" id="pricing">
   <div class="container">
     <div class="section-head">
       <div class="section-tag">ТАРИФИ</div>
-      <h2>Почни безкоштовно, рости коли потрібно</h2>
-      <p class="section-sub">Без прив'язки картки. Скасування в один клік.</p>
+      <h2>Почни безкоштовно</h2>
+      <p class="section-sub">Без прив'язки картки. Скасування в один клік. Дані не видаляються.</p>
     </div>
 
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="price-name">FREE</div>
-        <div class="price-val">₴0<span>/міс</span></div>
-        <ul class="price-list">
-          <li>✓ До 50 клієнтів</li>
-          <li>✓ До 20 рахунків/міс</li>
-          <li>✓ Базові модулі</li>
-          <li>✓ 1 користувач</li>
-        </ul>
-        <a href="#download" class="btn btn-ghost btn-block">Почати безкоштовно</a>
-      </div>
-
-      <div class="price-card price-card-featured">
-        <div class="price-badge">Популярний</div>
-        <div class="price-name" style="color:#5B8DEF">PRO</div>
-        <div class="price-val">₴299<span>/міс</span></div>
-        <ul class="price-list">
-          <li>✓ Необмежено клієнтів і рахунків</li>
-          <li>✓ PDF-експорт</li>
-          <li>✓ Розширена аналітика</li>
-          <li>✓ Усі модулі ніші</li>
-        </ul>
-        <a href="#download" class="btn btn-primary btn-block">Обрати PRO</a>
-      </div>
+    <div class="pricing-row">
 
       <div class="price-card">
-        <div class="price-name" style="color:#A78BFA">BUSINESS</div>
-        <div class="price-val">₴799<span>/міс</span></div>
+        <div class="price-tier">FREE</div>
+        <div class="price-amount">₴0<span>/міс</span></div>
+        <p class="price-desc">Для старту та ознайомлення</p>
         <ul class="price-list">
-          <li>✓ Усе з PRO</li>
-          <li>✓ Команда до 5 осіб</li>
-          <li>✓ До 3 окремих бізнесів</li>
-          <li>✓ Пріоритетна підтримка</li>
+          <li>До 50 клієнтів</li>
+          <li>До 20 рахунків на місяць</li>
+          <li>Базові модулі</li>
+          <li>1 користувач</li>
         </ul>
-        <a href="#download" class="btn btn-ghost btn-block">Обрати BUSINESS</a>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block">Почати безкоштовно</a>
       </div>
+
+      <div class="price-card price-featured">
+        <div class="price-popular">Найпопулярніший</div>
+        <div class="price-tier" style="color:#7C5CFC">PRO</div>
+        <div class="price-amount">₴299<span>/міс</span></div>
+        <p class="price-desc">Для активної роботи</p>
+        <ul class="price-list">
+          <li>Необмежено клієнтів і рахунків</li>
+          <li>PDF-експорт та email розсилка</li>
+          <li>Повторювані рахунки</li>
+          <li>Нагадування про борги</li>
+          <li>Розширена аналітика</li>
+          <li>Всі модулі</li>
+        </ul>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-block">Обрати PRO</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-tier" style="color:#A78BFA">BUSINESS</div>
+        <div class="price-amount">₴799<span>/міс</span></div>
+        <p class="price-desc">Для команди та кількох бізнесів</p>
+        <ul class="price-list">
+          <li>Все з PRO</li>
+          <li>Команда до 5 осіб</li>
+          <li>До 3 окремих бізнесів</li>
+          <li>Пріоритетна підтримка</li>
+        </ul>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block">Обрати BUSINESS</a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ───────── FAQ ───────── -->
-<section class="section section-alt" id="faq">
+<!-- ── FAQ ── -->
+<section class="section" id="faq">
   <div class="container container-narrow">
     <div class="section-head">
       <div class="section-tag">ПИТАННЯ</div>
       <h2>Часті запитання</h2>
     </div>
-
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>Чи потрібен ФОП для роботи з WorkHub?</summary>
-        <p>Ні. WorkHub можна використовувати як фізособа — для оплати підписки доступні крипта чи Monobank-переказ без реєстрації бізнесу.</p>
+        <summary>Чим WorkHub відрізняється від звичайної CRM?</summary>
+        <p>WorkHub — це не просто CRM. Це повна робоча область: клієнти, фінанси, каса, зарплата, ПРРО, розклад, команда, документи і аналітика — в одному застосунку. Замість 8–10 окремих сервісів — одне рішення під вашу нішу.</p>
       </details>
       <details class="faq-item">
         <summary>Де зберігаються мої дані?</summary>
-        <p>Дані синхронізуються через Firebase з офлайн-кешем — застосунок працює навіть без інтернету і автоматично синхронізується при підключенні.</p>
+        <p>Дані синхронізуються через Firebase — вашу приватну хмару. Застосунок працює і офлайн, синхронізується при підключенні. Ви завжди контролюєте свої дані.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чи потрібен ФОП для роботи?</summary>
+        <p>Ні. WorkHub можна використовувати як фізособа. Для оплати підписки — картка, Monobank або криптовалюта.</p>
       </details>
       <details class="faq-item">
         <summary>Можна запросити команду?</summary>
-        <p>Так, на плані BUSINESS можна запросити до 5 співробітників за кодом запрошення і вибрати кожному, які модулі йому доступні.</p>
+        <p>Так, на плані BUSINESS — до 5 співробітників за кодом запрошення. Кожному налаштовуєте доступ до потрібних модулів.</p>
       </details>
       <details class="faq-item">
         <summary>Чи є мобільна версія?</summary>
-        <p>Зараз WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.</p>
+        <p>Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.</p>
       </details>
       <details class="faq-item">
         <summary>Як скасувати підписку?</summary>
-        <p>В будь-який момент в Налаштуваннях → Підписка. Дані не видаляються, акаунт просто переходить на FREE план.</p>
+        <p>В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.</p>
       </details>
       <details class="faq-item">
         <summary>Які способи оплати підтримуються?</summary>
-        <p>Картка через AIFO (миттєва активація), Monobank-банка та криптовалюта (USDT, BTC, ETH) — без прив'язки до конкретного банку чи країни.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Чи можна вести облік у кількох валютах?</summary>
-        <p>Так, модуль "Фінанси" підтримує UAH, USD, EUR, GBP, PLN — суми автоматично конвертуються у гривню за курсом НБУ для звітності.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Що буде, якщо перевищу ліміти FREE плану?</summary>
-        <p>Застосунок попередить про ліміт (наприклад, 50 клієнтів чи 20 рахунків/міс) і запропонує перейти на PRO. Нічого не видаляється і не блокується автоматично.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Наскільки це безпечно для конфіденційних даних?</summary>
-        <p>Кожен користувач бачить лише свої дані (правила доступу Firebase), паролі та ключі зберігаються в захищених документах, є двофакторна автентифікація (2FA) для власника акаунту.</p>
+        <p>Картка через AIFO, Monobank-банка та криптовалюта (USDT, BTC, ETH).</p>
       </details>
       <details class="faq-item">
         <summary>Чи працює ПРРО та фіскалізація?</summary>
-        <p>Так, окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів, плюс податковий календар з нагадуваннями про дедлайни ЄП, ЄСВ і ВЗ.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Можна підключити власні інтеграції?</summary>
-        <p>Модуль "API та інтеграції" дозволяє підключити GitHub, OpenAI, Telegram-сповіщення та власні сервіси через API URL.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Що якщо я не ФОП і не маю бізнесу — підійде застосунок?</summary>
-        <p>Так, ніша "Фрілансер" одразу дає лише потрібні модулі (клієнти, проекти, рахунки, задачі) без зайвої бухгалтерської складності.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Куди звертатись з питаннями чи проблемою?</summary>
-        <p>Прямо в застосунку є модуль "Підтримка" з тікетами та розділ FAQ. Також можна написати в <a href="https://github.com/WorkHub-App" target="_blank" rel="noopener" style="color:var(--accent-blue)">GitHub WorkHub-App</a>.</p>
+        <p>Так. Окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів. Плюс податковий календар з автоматичними нагадуваннями про ЄП, ЄСВ і ВЗ.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ───────── DOWNLOAD CTA ───────── -->
-<section class="cta" id="download">
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
   <div class="container cta-inner">
     <h2>Готовий спробувати?</h2>
-    <p>Завантаж WorkHub зараз — встановлення займає менше хвилини.</p>
-    <div class="hero-actions" style="justify-content:center">
-      <a href="https://github.com/Pavlo554/workhub/releases/latest" id="dl-win-cta" class="btn btn-primary btn-lg" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>
-        <span id="dl-win-label">Завантажити для Windows</span>
+    <p>Встановлення займає менше хвилини. Безкоштовно, без картки.</p>
+    <div class="cta-actions">
+      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        Завантажити для Windows
       </a>
-      <a href="https://github.com/Pavlo554/workhub/releases/latest" id="dl-linux-cta" class="btn btn-ghost btn-lg" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 1 1 8 0c0 2-1.5 3-1.5 5"/><path d="M10.5 19h3"/></svg>
-        <span id="dl-linux-label">Завантажити для Linux</span>
+      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta">
+        Завантажити для Linux
       </a>
     </div>
     <p class="cta-meta" id="dl-meta"></p>
   </div>
 </section>
 
-<!-- ───────── FOOTER ───────── -->
+<!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="container footer-inner">
-    <div class="brand"><span class="brand-icon">W</span>WorkHub</div>
-    <p>© 2025–2026 Pavlo Turanskyi. Усі права захищені.</p>
-    <div class="footer-social">
-      <a href="https://t.me/workhubapp" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12s5.15 11.5 11.5 11.5S23.5 18.35 23.5 12 18.35.5 12 .5zm5.4 7.9l-1.9 9.05c-.14.64-.52.79-1.05.49l-2.9-2.14-1.4 1.35c-.16.16-.29.29-.59.29l.21-2.99 5.44-4.92c.24-.21-.05-.33-.36-.12l-6.73 4.24-2.9-.91c-.63-.2-.64-.63.13-.93l11.34-4.37c.52-.19.98.13.71 1.3z"/></svg>
+    <div class="brand">
+      <div class="brand-logo">W</div>
+      WorkHub
+    </div>
+    <p class="footer-copy">© 2025–2026 Pavlo Turanskyi. Усі права захищені.</p>
+    <div class="footer-links">
+      <a href="https://t.me/workhubapp" target="_blank" rel="noopener" title="Telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12s5.15 11.5 11.5 11.5S23.5 18.35 23.5 12 18.35.5 12 .5zm5.4 7.9l-1.9 9.05c-.14.64-.52.79-1.05.49l-2.9-2.14-1.4 1.35c-.16.16-.29.29-.59.29l.21-2.99 5.44-4.92c.24-.21-.05-.33-.36-.12l-6.73 4.24-2.9-.91c-.63-.2-.64-.63.13-.93l11.34-4.37c.52-.19.98.13.71 1.3z"/></svg>
       </a>
-      <a href="https://www.instagram.com/workhub.apps/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      <a href="https://www.instagram.com/workhub.apps/" target="_blank" rel="noopener" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
       </a>
-      <a href="https://github.com/WorkHub-App" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.81-.01 3.19 0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      <a href="https://github.com/WorkHub-App" target="_blank" rel="noopener" title="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.81-.01 3.19 0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
       </a>
     </div>
   </div>
 </footer>
 
 <script>
-// Плавна поява блоків при скролі — кожна картка в сітці отримує невелику
-// затримку відносно сусідів, щоб з'являлись каскадом, а не всі одночасно.
-(function setupScrollReveal() {
-  const targets = document.querySelectorAll(
-    '.section-head, .feature-card, .module-cat, .step, .price-card, .faq-item, .all-modules-head'
-  );
-  targets.forEach(el => el.classList.add('reveal'));
-
-  const groupIndex = new Map();
-  targets.forEach(el => {
-    const parent = el.parentElement;
-    const i = groupIndex.get(parent) || 0;
-    el.style.transitionDelay = `${Math.min(i * 70, 280)}ms`;
-    groupIndex.set(parent, i + 1);
+(function scrollReveal() {
+  const els = document.querySelectorAll('.section-head, .bento-card, .module-col, .step-item, .price-card, .faq-item');
+  els.forEach(el => el.classList.add('reveal'));
+  const map = new Map();
+  els.forEach(el => {
+    const p = el.parentElement, i = map.get(p) || 0;
+    el.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
+    map.set(p, i + 1);
   });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  targets.forEach(el => observer.observe(el));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
 })();
 
-// Підсвічування активного пункту навігації відповідно до розділу в полі зору.
-(function setupScrollSpy() {
-  const navLinks = [...document.querySelectorAll('.nav-links a[data-nav]')];
-  if (!navLinks.length) return;
-  const sections = navLinks
-    .map(a => document.getElementById(a.dataset.nav))
-    .filter(Boolean);
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === entry.target.id));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-})();
-
-// Завжди вказуємо на реальний .exe / .AppImage останнього релізу — без
-// проміжної сторінки GitHub. Якщо запит не вдався (немає інтернету, ліміт
-// API) — лишається посилання на releases/latest, яке користувач сам обере.
-(async function setupDirectDownloads() {
+(async function directDownloads() {
   try {
     const res = await fetch('https://api.github.com/repos/Pavlo554/workhub/releases/latest');
     if (!res.ok) return;
     const data = await res.json();
-    const assets = data.assets || [];
-    const exe = assets.find(a => /\.exe$/i.test(a.name));
-    const appImage = assets.find(a => /\.AppImage$/i.test(a.name));
-    const version = (data.tag_name || '').replace(/^v/, '');
-
-    if (exe) {
-      ['dl-win-nav', 'dl-win-hero', 'dl-win-cta'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.href = exe.browser_download_url;
-      });
-    }
-    if (appImage) {
-      const el = document.getElementById('dl-linux-cta');
-      if (el) el.href = appImage.browser_download_url;
-    }
-
-    const metaEl = document.getElementById('dl-meta');
-    if (metaEl && (exe || appImage) && version) {
-      const sizeMb = exe ? (exe.size / 1024 / 1024).toFixed(0) : null;
-      metaEl.textContent = `Версія ${version}${sizeMb ? ` · ${sizeMb} МБ` : ''} · безкоштовно`;
-    }
-  } catch {
-    // мовчки лишаємо посилання на сторінку релізів
-  }
+    const exe = data.assets?.find(a => /\.exe$/i.test(a.name));
+    const appImage = data.assets?.find(a => /\.AppImage$/i.test(a.name));
+    const v = (data.tag_name || '').replace(/^v/, '');
+    if (exe) ['dl-win-nav','dl-win-hero','dl-win-cta'].forEach(id => { const el = document.getElementById(id); if (el) el.href = exe.browser_download_url; });
+    if (appImage) { const el = document.getElementById('dl-linux-cta'); if (el) el.href = appImage.browser_download_url; }
+    const meta = document.getElementById('dl-meta');
+    if (meta && v) meta.textContent = `Версія ${v}${exe ? ' · ' + (exe.size/1024/1024).toFixed(0) + ' МБ' : ''} · безкоштовно`;
+  } catch {}
 })();
 </script>
-
 </body>
 </html>
