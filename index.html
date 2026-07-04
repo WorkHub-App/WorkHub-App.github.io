@@ -4,12 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WorkHub — Робоча область для вашого бізнесу</title>
-<meta name="description" content="WorkHub — десктопний застосунок що замінює 10 окремих сервісів. Клієнти, фінанси, команда, документи, розклад — в одному місці. Для фрілансерів, агентств, ФОП і салонів.">
+<meta name="description" content="WorkHub — десктопний застосунок що замінює 10 окремих сервісів. Клієнти, фінанси, команда, документи, розклад — в одному місці.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%237C5CFC%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22800%22>W</text></svg>">
+<style>
+  .lang-switcher { display:flex; gap:2px; background:rgba(255,255,255,.07); border-radius:8px; padding:3px; }
+  .lang-btn { padding:4px 9px; border-radius:6px; font-size:12px; font-weight:700; color:rgba(255,255,255,.45); cursor:pointer; transition:all .15s; border:none; background:none; letter-spacing:.04em; }
+  .lang-btn.active { background:rgba(255,255,255,.14); color:#fff; }
+  .lang-btn:hover:not(.active) { color:rgba(255,255,255,.75); }
+</style>
 </head>
 <body>
 
@@ -21,11 +27,16 @@
       WorkHub
     </div>
     <nav class="nav-links">
-      <a href="#features">Можливості</a>
-      <a href="#pricing">Тарифи</a>
-      <a href="#faq">Питання</a>
+      <a href="#features" data-i18n="nav.features">Можливості</a>
+      <a href="#pricing" data-i18n="nav.pricing">Тарифи</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
     </nav>
-    <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav">Скачати безкоштовно</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="uk">UA</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav" data-i18n="nav.download">Скачати безкоштовно</a>
   </div>
 </header>
 
@@ -39,26 +50,26 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Десктоп-застосунок · Windows · Linux
+        <span data-i18n="hero.badge">Десктоп-застосунок · Windows · Linux</span>
       </div>
       <h1>
-        Ваш бізнес.<br>
-        <span class="grad-text">Одна вкладка.</span>
+        <span data-i18n="hero.title1">Ваш бізнес.</span><br>
+        <span class="grad-text" data-i18n="hero.title2">Одна вкладка.</span>
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-i18n="hero.sub">
         WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.
       </p>
       <div class="hero-actions">
         <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-          Скачати для Windows
+          <span data-i18n="hero.dl_win">Скачати для Windows</span>
         </a>
-        <a href="#features" class="btn btn-ghost btn-lg">Що всередині →</a>
+        <a href="#features" class="btn btn-ghost btn-lg" data-i18n="hero.explore">Що всередині →</a>
       </div>
       <div class="hero-trust">
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Безкоштовний план назавжди</span>
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Дані у вашій хмарі</span>
-        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Повністю українською</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="hero.trust1">Безкоштовний план назавжди</span></span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="hero.trust2">Дані у вашій хмарі</span></span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="hero.trust3">Повністю українською</span></span>
       </div>
     </div>
 
@@ -68,7 +79,7 @@
           <div class="mock-dots"><span></span><span></span><span></span></div>
           <div class="mock-url">WorkHub</div>
         </div>
-        <img src="photo_2026-06-28_00-09-20.jpg" alt="Дашборд WorkHub" class="mock-img">
+        <img src="photo_2026-06-28_00-09-20.jpg" alt="WorkHub Dashboard" class="mock-img">
       </div>
     </div>
   </div>
@@ -77,36 +88,36 @@
 <!-- ── NICHES ── -->
 <div class="niches-strip">
   <div class="container">
-    <p class="niches-label">Для всіх хто веде власну справу</p>
+    <p class="niches-label" data-i18n="niches.label">Для всіх хто веде власну справу</p>
     <div class="niches-row">
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        Фрілансери
+        <span data-i18n="niche.freelancer">Фрілансери</span>
       </div>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg>
-        Бухгалтери / ФОП
+        <span data-i18n="niche.accountant">Бухгалтери / ФОП</span>
       </div>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        IT-агенції
+        <span data-i18n="niche.it">IT-агенції</span>
       </div>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5z"/></svg>
-        Салони краси
+        <span data-i18n="niche.beauty">Салони краси</span>
       </div>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
-        SMM-агенції
+        <span data-i18n="niche.smm">SMM-агенції</span>
       </div>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
-        Ательє / Студії
+        <span data-i18n="niche.atelier">Ательє / Студії</span>
       </div>
     </div>
   </div>
@@ -116,9 +127,9 @@
 <section class="section" id="features">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">МОЖЛИВОСТІ</div>
-      <h2>Все що потрібно — вже всередині</h2>
-      <p class="section-sub">29+ модулів, що підключаються під вашу нішу автоматично. Зайве — вимикається в один клік.</p>
+      <div class="section-tag" data-i18n="features.tag">МОЖЛИВОСТІ</div>
+      <h2 data-i18n="features.title">Все що потрібно — вже всередині</h2>
+      <p class="section-sub" data-i18n="features.sub">29+ модулів, що підключаються під вашу нішу автоматично. Зайве — вимикається в один клік.</p>
     </div>
 
     <div class="features-bento">
@@ -127,10 +138,10 @@
         <div class="bento-icon" style="color:#7C5CFC">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Клієнти та воронка продажів</h3>
-        <p>Картки клієнтів, Kanban-воронка від ліда до угоди, аналітика по конверсії та доходу. Клієнтський портал — клієнт бачить свої рахунки онлайн.</p>
+        <h3 data-i18n="feat.clients.title">Клієнти та воронка продажів</h3>
+        <p data-i18n="feat.clients.desc">Картки клієнтів, Kanban-воронка від ліда до угоди, аналітика по конверсії та доходу. Клієнтський портал — клієнт бачить свої рахунки онлайн.</p>
         <div class="bento-tags">
-          <span>Клієнти</span><span>Воронка</span><span>Портал</span>
+          <span data-i18n="feat.clients.t1">Клієнти</span><span data-i18n="feat.clients.t2">Воронка</span><span data-i18n="feat.clients.t3">Портал</span>
         </div>
       </div>
 
@@ -138,8 +149,8 @@
         <div class="bento-icon" style="color:#22C55E">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
         </div>
-        <h3>Рахунки та фінанси</h3>
-        <p>PDF-рахунки, оплата карткою або крипто. Повторювані рахунки — генеруються автоматично. Нагадування клієнту якщо не оплатив.</p>
+        <h3 data-i18n="feat.finance.title">Рахунки та фінанси</h3>
+        <p data-i18n="feat.finance.desc">PDF-рахунки, оплата карткою або крипто. Повторювані рахунки — генеруються автоматично. Нагадування клієнту якщо не оплатив.</p>
         <div class="bento-tags"><span>PRO</span></div>
       </div>
 
@@ -147,18 +158,18 @@
         <div class="bento-icon" style="color:#F59E0B">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         </div>
-        <h3>Задачі та проекти</h3>
-        <p>Kanban-дошка, дедлайни, пріоритети, таймер робочого часу. Вставка скріншотів прямо з буфера (Ctrl+V).</p>
+        <h3 data-i18n="feat.tasks.title">Задачі та проекти</h3>
+        <p data-i18n="feat.tasks.desc">Kanban-дошка, дедлайни, пріоритети, таймер робочого часу. Вставка скріншотів прямо з буфера (Ctrl+V).</p>
       </div>
 
       <div class="bento-card bento-wide">
         <div class="bento-icon" style="color:#38BDF8">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
         </div>
-        <h3>Каса, банк і зарплата</h3>
-        <p>ПКО/РКО з ПДВ та акцизом, кілька банківських рахунків, нарахування зарплати з автоматичним розрахунком ПДФО і ЄСВ. ПРРО для фіскальних чеків і Z-звітів.</p>
+        <h3 data-i18n="feat.cash.title">Каса, банк і зарплата</h3>
+        <p data-i18n="feat.cash.desc">ПКО/РКО з ПДВ та акцизом, кілька банківських рахунків, нарахування зарплати з автоматичним розрахунком ПДФО і ЄСВ. ПРРО для фіскальних чеків і Z-звітів.</p>
         <div class="bento-tags">
-          <span>Каса</span><span>Банк</span><span>Зарплата</span><span>ПРРО</span>
+          <span data-i18n="feat.cash.t1">Каса</span><span data-i18n="feat.cash.t2">Банк</span><span data-i18n="feat.cash.t3">Зарплата</span><span>ПРРО</span>
         </div>
       </div>
 
@@ -166,17 +177,17 @@
         <div class="bento-icon" style="color:#F472B6">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         </div>
-        <h3>Онлайн-запис для салонів</h3>
-        <p>Клієнт сам бронює час за посиланням. Ви налаштовуєте робочі години і отримуєте запис в розкладі.</p>
-        <div class="bento-tags"><span>Салони краси</span></div>
+        <h3 data-i18n="feat.booking.title">Онлайн-запис для салонів</h3>
+        <p data-i18n="feat.booking.desc">Клієнт сам бронює час за посиланням. Ви налаштовуєте робочі години і отримуєте запис в розкладі.</p>
+        <div class="bento-tags"><span data-i18n="feat.booking.t1">Салони краси</span></div>
       </div>
 
       <div class="bento-card">
         <div class="bento-icon" style="color:#A78BFA">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Команда та права доступу</h3>
-        <p>Запрошуй співробітників, обирай кому які модулі видно. Облік персоналу, накази HR, особові картки.</p>
+        <h3 data-i18n="feat.team.title">Команда та права доступу</h3>
+        <p data-i18n="feat.team.desc">Запрошуй співробітників, обирай кому які модулі видно. Облік персоналу, накази HR, особові картки.</p>
       </div>
 
     </div>
@@ -187,73 +198,73 @@
 <section class="section section-dim">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">МОДУЛІ</div>
-      <h2>29+ модулів в одному застосунку</h2>
-      <p class="section-sub">Підключаються автоматично під обрану нішу. Непотрібні — вимкнені за замовчуванням.</p>
+      <div class="section-tag" data-i18n="modules.tag">МОДУЛІ</div>
+      <h2 data-i18n="modules.title">29+ модулів в одному застосунку</h2>
+      <p class="section-sub" data-i18n="modules.sub">Підключаються автоматично під обрану нішу. Непотрібні — вимкнені за замовчуванням.</p>
     </div>
     <div class="module-grid">
 
       <div class="module-col">
-        <div class="module-col-title">Бізнес та клієнти</div>
+        <div class="module-col-title" data-i18n="mod.col1.title">Бізнес та клієнти</div>
         <ul>
-          <li>Клієнти</li>
-          <li>Воронка продажів</li>
-          <li>Проекти</li>
-          <li>Задачі</li>
-          <li>Таймер</li>
-          <li>Нотатки</li>
-          <li>Шаблони документів</li>
+          <li data-i18n="mod.col1.1">Клієнти</li>
+          <li data-i18n="mod.col1.2">Воронка продажів</li>
+          <li data-i18n="mod.col1.3">Проекти</li>
+          <li data-i18n="mod.col1.4">Задачі</li>
+          <li data-i18n="mod.col1.5">Таймер</li>
+          <li data-i18n="mod.col1.6">Нотатки</li>
+          <li data-i18n="mod.col1.7">Шаблони документів</li>
         </ul>
       </div>
 
       <div class="module-col">
-        <div class="module-col-title">Фінанси</div>
+        <div class="module-col-title" data-i18n="mod.col2.title">Фінанси</div>
         <ul>
-          <li>Рахунки (PDF + email)</li>
-          <li>Повторювані рахунки</li>
-          <li>Договори</li>
-          <li>Фінанси</li>
-          <li>Каса (ПКО/РКО)</li>
-          <li>Банк</li>
-          <li>Конвертер валют</li>
-          <li>Календар платежів</li>
+          <li data-i18n="mod.col2.1">Рахунки (PDF + email)</li>
+          <li data-i18n="mod.col2.2">Повторювані рахунки</li>
+          <li data-i18n="mod.col2.3">Договори</li>
+          <li data-i18n="mod.col2.4">Фінанси</li>
+          <li data-i18n="mod.col2.5">Каса (ПКО/РКО)</li>
+          <li data-i18n="mod.col2.6">Банк</li>
+          <li data-i18n="mod.col2.7">Конвертер валют</li>
+          <li data-i18n="mod.col2.8">Календар платежів</li>
         </ul>
       </div>
 
       <div class="module-col">
-        <div class="module-col-title">ФОП і звіти</div>
+        <div class="module-col-title" data-i18n="mod.col3.title">ФОП і звіти</div>
         <ul>
-          <li>Зарплата (ПДФО/ЄСВ)</li>
+          <li data-i18n="mod.col3.1">Зарплата (ПДФО/ЄСВ)</li>
           <li>ПРРО</li>
-          <li>Податковий календар</li>
-          <li>Аналітика бізнесу</li>
-          <li>Квартальні звіти</li>
+          <li data-i18n="mod.col3.3">Податковий календар</li>
+          <li data-i18n="mod.col3.4">Аналітика бізнесу</li>
+          <li data-i18n="mod.col3.5">Квартальні звіти</li>
         </ul>
       </div>
 
       <div class="module-col">
-        <div class="module-col-title">Спеціалізовані</div>
+        <div class="module-col-title" data-i18n="mod.col4.title">Спеціалізовані</div>
         <ul>
-          <li>Розклад та записи</li>
-          <li>Онлайн-бронювання</li>
-          <li>Послуги</li>
-          <li>Склад</li>
-          <li>Контент-план (SMM)</li>
-          <li>Портфоліо</li>
-          <li>Акаунти соцмереж</li>
+          <li data-i18n="mod.col4.1">Розклад та записи</li>
+          <li data-i18n="mod.col4.2">Онлайн-бронювання</li>
+          <li data-i18n="mod.col4.3">Послуги</li>
+          <li data-i18n="mod.col4.4">Склад</li>
+          <li data-i18n="mod.col4.5">Контент-план (SMM)</li>
+          <li data-i18n="mod.col4.6">Портфоліо</li>
+          <li data-i18n="mod.col4.7">Акаунти соцмереж</li>
         </ul>
       </div>
 
       <div class="module-col">
-        <div class="module-col-title">Команда і безпека</div>
+        <div class="module-col-title" data-i18n="mod.col5.title">Команда і безпека</div>
         <ul>
-          <li>Команда / HR</li>
-          <li>Персонал</li>
-          <li>Клієнтський портал</li>
-          <li>Паролі</li>
-          <li>API та інтеграції</li>
-          <li>2FA (Google Auth)</li>
-          <li>Підтримка</li>
+          <li data-i18n="mod.col5.1">Команда / HR</li>
+          <li data-i18n="mod.col5.2">Персонал</li>
+          <li data-i18n="mod.col5.3">Клієнтський портал</li>
+          <li data-i18n="mod.col5.4">Паролі</li>
+          <li data-i18n="mod.col5.5">API та інтеграції</li>
+          <li data-i18n="mod.col5.6">2FA (Google Auth)</li>
+          <li data-i18n="mod.col5.7">Підтримка</li>
         </ul>
       </div>
 
@@ -265,26 +276,26 @@
 <section class="section" id="how">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">ЯК ЦЕ ПРАЦЮЄ</div>
-      <h2>Від встановлення до першого клієнта — 2 хвилини</h2>
+      <div class="section-tag" data-i18n="how.tag">ЯК ЦЕ ПРАЦЮЄ</div>
+      <h2 data-i18n="how.title">Від встановлення до першого клієнта — 2 хвилини</h2>
     </div>
     <div class="steps-row">
       <div class="step-item">
         <div class="step-num">01</div>
-        <h3>Завантаж і встанови</h3>
-        <p>Один .exe файл. Без адмін-прав, без залежностей, без реєстрації. Просто запускаєш і працюєш.</p>
+        <h3 data-i18n="how.s1.title">Завантаж і встанови</h3>
+        <p data-i18n="how.s1.desc">Один .exe файл. Без адмін-прав, без залежностей, без реєстрації. Просто запускаєш і працюєш.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step-item">
         <div class="step-num">02</div>
-        <h3>Обери свою нішу</h3>
-        <p>Фрілансер, IT-агенція, бухгалтер, SMM чи салон краси — нужні модулі підключаться самі.</p>
+        <h3 data-i18n="how.s2.title">Обери свою нішу</h3>
+        <p data-i18n="how.s2.desc">Фрілансер, IT-агенція, бухгалтер, SMM чи салон краси — нужні модулі підключаться самі.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step-item">
         <div class="step-num">03</div>
-        <h3>Починай працювати</h3>
-        <p>Додай клієнта, виставь рахунок, приймай оплату. Дані синхронізуються в хмарі автоматично.</p>
+        <h3 data-i18n="how.s3.title">Починай працювати</h3>
+        <p data-i18n="how.s3.desc">Додай клієнта, виставь рахунок, приймай оплату. Дані синхронізуються в хмарі автоматично.</p>
       </div>
     </div>
   </div>
@@ -294,53 +305,53 @@
 <section class="section section-dim" id="pricing">
   <div class="container">
     <div class="section-head">
-      <div class="section-tag">ТАРИФИ</div>
-      <h2>Почни безкоштовно</h2>
-      <p class="section-sub">Без прив'язки картки. Скасування в один клік. Дані не видаляються.</p>
+      <div class="section-tag" data-i18n="pricing.tag">ТАРИФИ</div>
+      <h2 data-i18n="pricing.title">Почни безкоштовно</h2>
+      <p class="section-sub" data-i18n="pricing.sub">Без прив'язки картки. Скасування в один клік. Дані не видаляються.</p>
     </div>
 
     <div class="pricing-row">
 
       <div class="price-card">
         <div class="price-tier">FREE</div>
-        <div class="price-amount">₴0<span>/міс</span></div>
-        <p class="price-desc">Для старту та ознайомлення</p>
+        <div class="price-amount">₴0<span data-i18n="pricing.period">/міс</span></div>
+        <p class="price-desc" data-i18n="pricing.free.desc">Для старту та ознайомлення</p>
         <ul class="price-list">
-          <li>До 50 клієнтів</li>
-          <li>До 20 рахунків на місяць</li>
-          <li>Базові модулі</li>
-          <li>1 користувач</li>
+          <li data-i18n="pricing.free.1">До 50 клієнтів</li>
+          <li data-i18n="pricing.free.2">До 20 рахунків на місяць</li>
+          <li data-i18n="pricing.free.3">Базові модулі</li>
+          <li data-i18n="pricing.free.4">1 користувач</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block">Почати безкоштовно</a>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.free.btn">Почати безкоштовно</a>
       </div>
 
       <div class="price-card price-featured">
-        <div class="price-popular">Найпопулярніший</div>
+        <div class="price-popular" data-i18n="pricing.popular">Найпопулярніший</div>
         <div class="price-tier" style="color:#7C5CFC">PRO</div>
-        <div class="price-amount">₴299<span>/міс</span></div>
-        <p class="price-desc">Для активної роботи</p>
+        <div class="price-amount">₴299<span data-i18n="pricing.period">/міс</span></div>
+        <p class="price-desc" data-i18n="pricing.pro.desc">Для активної роботи</p>
         <ul class="price-list">
-          <li>Необмежено клієнтів і рахунків</li>
-          <li>PDF-експорт та email розсилка</li>
-          <li>Повторювані рахунки</li>
-          <li>Нагадування про борги</li>
-          <li>Розширена аналітика</li>
-          <li>Всі модулі</li>
+          <li data-i18n="pricing.pro.1">Необмежено клієнтів і рахунків</li>
+          <li data-i18n="pricing.pro.2">PDF-експорт та email розсилка</li>
+          <li data-i18n="pricing.pro.3">Повторювані рахунки</li>
+          <li data-i18n="pricing.pro.4">Нагадування про борги</li>
+          <li data-i18n="pricing.pro.5">Розширена аналітика</li>
+          <li data-i18n="pricing.pro.6">Всі модулі</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-block">Обрати PRO</a>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-block" data-i18n="pricing.pro.btn">Обрати PRO</a>
       </div>
 
       <div class="price-card">
         <div class="price-tier" style="color:#A78BFA">BUSINESS</div>
-        <div class="price-amount">₴799<span>/міс</span></div>
-        <p class="price-desc">Для команди та кількох бізнесів</p>
+        <div class="price-amount">₴799<span data-i18n="pricing.period">/міс</span></div>
+        <p class="price-desc" data-i18n="pricing.biz.desc">Для команди та кількох бізнесів</p>
         <ul class="price-list">
-          <li>Все з PRO</li>
-          <li>Команда до 5 осіб</li>
-          <li>До 3 окремих бізнесів</li>
-          <li>Пріоритетна підтримка</li>
+          <li data-i18n="pricing.biz.1">Все з PRO</li>
+          <li data-i18n="pricing.biz.2">Команда до 5 осіб</li>
+          <li data-i18n="pricing.biz.3">До 3 окремих бізнесів</li>
+          <li data-i18n="pricing.biz.4">Пріоритетна підтримка</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block">Обрати BUSINESS</a>
+        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.biz.btn">Обрати BUSINESS</a>
       </div>
 
     </div>
@@ -351,41 +362,41 @@
 <section class="section" id="faq">
   <div class="container container-narrow">
     <div class="section-head">
-      <div class="section-tag">ПИТАННЯ</div>
-      <h2>Часті запитання</h2>
+      <div class="section-tag" data-i18n="faq.tag">ПИТАННЯ</div>
+      <h2 data-i18n="faq.title">Часті запитання</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>Чим WorkHub відрізняється від звичайної CRM?</summary>
-        <p>WorkHub — це не просто CRM. Це повна робоча область: клієнти, фінанси, каса, зарплата, ПРРО, розклад, команда, документи і аналітика — в одному застосунку. Замість 8–10 окремих сервісів — одне рішення під вашу нішу.</p>
+        <summary data-i18n="faq.q1">Чим WorkHub відрізняється від звичайної CRM?</summary>
+        <p data-i18n="faq.a1">WorkHub — це не просто CRM. Це повна робоча область: клієнти, фінанси, каса, зарплата, ПРРО, розклад, команда, документи і аналітика — в одному застосунку. Замість 8–10 окремих сервісів — одне рішення під вашу нішу.</p>
       </details>
       <details class="faq-item">
-        <summary>Де зберігаються мої дані?</summary>
-        <p>Дані синхронізуються через Firebase — вашу приватну хмару. Застосунок працює і офлайн, синхронізується при підключенні. Ви завжди контролюєте свої дані.</p>
+        <summary data-i18n="faq.q2">Де зберігаються мої дані?</summary>
+        <p data-i18n="faq.a2">Дані синхронізуються через Firebase — вашу приватну хмару. Застосунок працює і офлайн, синхронізується при підключенні. Ви завжди контролюєте свої дані.</p>
       </details>
       <details class="faq-item">
-        <summary>Чи потрібен ФОП для роботи?</summary>
-        <p>Ні. WorkHub можна використовувати як фізособа. Для оплати підписки — картка, Monobank або криптовалюта.</p>
+        <summary data-i18n="faq.q3">Чи потрібен ФОП для роботи?</summary>
+        <p data-i18n="faq.a3">Ні. WorkHub можна використовувати як фізособа. Для оплати підписки — картка, Monobank або криптовалюта.</p>
       </details>
       <details class="faq-item">
-        <summary>Можна запросити команду?</summary>
-        <p>Так, на плані BUSINESS — до 5 співробітників за кодом запрошення. Кожному налаштовуєте доступ до потрібних модулів.</p>
+        <summary data-i18n="faq.q4">Можна запросити команду?</summary>
+        <p data-i18n="faq.a4">Так, на плані BUSINESS — до 5 співробітників за кодом запрошення. Кожному налаштовуєте доступ до потрібних модулів.</p>
       </details>
       <details class="faq-item">
-        <summary>Чи є мобільна версія?</summary>
-        <p>Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.</p>
+        <summary data-i18n="faq.q5">Чи є мобільна версія?</summary>
+        <p data-i18n="faq.a5">Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.</p>
       </details>
       <details class="faq-item">
-        <summary>Як скасувати підписку?</summary>
-        <p>В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.</p>
+        <summary data-i18n="faq.q6">Як скасувати підписку?</summary>
+        <p data-i18n="faq.a6">В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.</p>
       </details>
       <details class="faq-item">
-        <summary>Які способи оплати підтримуються?</summary>
-        <p>Картка через AIFO, Monobank-банка та криптовалюта (USDT, BTC, ETH).</p>
+        <summary data-i18n="faq.q7">Які способи оплати підтримуються?</summary>
+        <p data-i18n="faq.a7">Картка через AIFO, Monobank-банка та криптовалюта (USDT, BTC, ETH).</p>
       </details>
       <details class="faq-item">
-        <summary>Чи працює ПРРО та фіскалізація?</summary>
-        <p>Так. Окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів. Плюс податковий календар з автоматичними нагадуваннями про ЄП, ЄСВ і ВЗ.</p>
+        <summary data-i18n="faq.q8">Чи працює ПРРО та фіскалізація?</summary>
+        <p data-i18n="faq.a8">Так. Окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів. Плюс податковий календар з автоматичними нагадуваннями про ЄП, ЄСВ і ВЗ.</p>
       </details>
     </div>
   </div>
@@ -395,16 +406,14 @@
 <section class="cta-section">
   <div class="cta-glow"></div>
   <div class="container cta-inner">
-    <h2>Готовий спробувати?</h2>
-    <p>Встановлення займає менше хвилини. Безкоштовно, без картки.</p>
+    <h2 data-i18n="cta.title">Готовий спробувати?</h2>
+    <p data-i18n="cta.sub">Встановлення займає менше хвилини. Безкоштовно, без картки.</p>
     <div class="cta-actions">
       <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-        Завантажити для Windows
+        <span data-i18n="cta.dl_win">Завантажити для Windows</span>
       </a>
-      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta">
-        Завантажити для Linux
-      </a>
+      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta" data-i18n="cta.dl_linux">Завантажити для Linux</a>
     </div>
     <p class="cta-meta" id="dl-meta"></p>
   </div>
@@ -417,7 +426,7 @@
       <div class="brand-logo">W</div>
       WorkHub
     </div>
-    <p class="footer-copy">© 2025–2026 Pavlo Turanskyi. Усі права захищені.</p>
+    <p class="footer-copy" data-i18n="footer.copy">© 2025–2026 Pavlo Turanskyi. Усі права захищені.</p>
     <div class="footer-links">
       <a href="https://t.me/workhubapp" target="_blank" rel="noopener" title="Telegram">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12s5.15 11.5 11.5 11.5S23.5 18.35 23.5 12 18.35.5 12 .5zm5.4 7.9l-1.9 9.05c-.14.64-.52.79-1.05.49l-2.9-2.14-1.4 1.35c-.16.16-.29.29-.59.29l.21-2.99 5.44-4.92c.24-.21-.05-.33-.36-.12l-6.73 4.24-2.9-.91c-.63-.2-.64-.63.13-.93l11.34-4.37c.52-.19.98.13.71 1.3z"/></svg>
@@ -433,6 +442,238 @@
 </footer>
 
 <script>
+// ── Translations ──────────────────────────────────────────────────────────────
+const T = {
+  uk: {
+    'page.title': 'WorkHub — Робоча область для вашого бізнесу',
+    'page.desc': 'WorkHub — десктопний застосунок що замінює 10 окремих сервісів. Клієнти, фінанси, команда, документи, розклад — в одному місці.',
+    'nav.features': 'Можливості', 'nav.pricing': 'Тарифи', 'nav.faq': 'Питання', 'nav.download': 'Скачати безкоштовно',
+    'hero.badge': 'Десктоп-застосунок · Windows · Linux',
+    'hero.title1': 'Ваш бізнес.', 'hero.title2': 'Одна вкладка.',
+    'hero.sub': 'WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.',
+    'hero.dl_win': 'Скачати для Windows', 'hero.explore': 'Що всередині →',
+    'hero.trust1': 'Безкоштовний план назавжди', 'hero.trust2': 'Дані у вашій хмарі', 'hero.trust3': 'Повністю українською',
+    'niches.label': 'Для всіх хто веде власну справу',
+    'niche.freelancer': 'Фрілансери', 'niche.accountant': 'Бухгалтери / ФОП', 'niche.it': 'IT-агенції',
+    'niche.beauty': 'Салони краси', 'niche.smm': 'SMM-агенції', 'niche.atelier': 'Ательє / Студії',
+    'features.tag': 'МОЖЛИВОСТІ', 'features.title': 'Все що потрібно — вже всередині',
+    'features.sub': '29+ модулів, що підключаються під вашу нішу автоматично. Зайве — вимикається в один клік.',
+    'feat.clients.title': 'Клієнти та воронка продажів',
+    'feat.clients.desc': 'Картки клієнтів, Kanban-воронка від ліда до угоди, аналітика по конверсії та доходу. Клієнтський портал — клієнт бачить свої рахунки онлайн.',
+    'feat.clients.t1': 'Клієнти', 'feat.clients.t2': 'Воронка', 'feat.clients.t3': 'Портал',
+    'feat.finance.title': 'Рахунки та фінанси',
+    'feat.finance.desc': 'PDF-рахунки, оплата карткою або крипто. Повторювані рахунки — генеруються автоматично. Нагадування клієнту якщо не оплатив.',
+    'feat.tasks.title': 'Задачі та проекти',
+    'feat.tasks.desc': 'Kanban-дошка, дедлайни, пріоритети, таймер робочого часу. Вставка скріншотів прямо з буфера (Ctrl+V).',
+    'feat.cash.title': 'Каса, банк і зарплата',
+    'feat.cash.desc': 'ПКО/РКО з ПДВ та акцизом, кілька банківських рахунків, нарахування зарплати з автоматичним розрахунком ПДФО і ЄСВ. ПРРО для фіскальних чеків і Z-звітів.',
+    'feat.cash.t1': 'Каса', 'feat.cash.t2': 'Банк', 'feat.cash.t3': 'Зарплата',
+    'feat.booking.title': 'Онлайн-запис для салонів',
+    'feat.booking.desc': 'Клієнт сам бронює час за посиланням. Ви налаштовуєте робочі години і отримуєте запис в розкладі.',
+    'feat.booking.t1': 'Салони краси',
+    'feat.team.title': 'Команда та права доступу',
+    'feat.team.desc': 'Запрошуй співробітників, обирай кому які модулі видно. Облік персоналу, накази HR, особові картки.',
+    'modules.tag': 'МОДУЛІ', 'modules.title': '29+ модулів в одному застосунку',
+    'modules.sub': 'Підключаються автоматично під обрану нішу. Непотрібні — вимкнені за замовчуванням.',
+    'mod.col1.title': 'Бізнес та клієнти', 'mod.col1.1': 'Клієнти', 'mod.col1.2': 'Воронка продажів',
+    'mod.col1.3': 'Проекти', 'mod.col1.4': 'Задачі', 'mod.col1.5': 'Таймер', 'mod.col1.6': 'Нотатки', 'mod.col1.7': 'Шаблони документів',
+    'mod.col2.title': 'Фінанси', 'mod.col2.1': 'Рахунки (PDF + email)', 'mod.col2.2': 'Повторювані рахунки',
+    'mod.col2.3': 'Договори', 'mod.col2.4': 'Фінанси', 'mod.col2.5': 'Каса (ПКО/РКО)', 'mod.col2.6': 'Банк', 'mod.col2.7': 'Конвертер валют', 'mod.col2.8': 'Календар платежів',
+    'mod.col3.title': 'ФОП і звіти', 'mod.col3.1': 'Зарплата (ПДФО/ЄСВ)', 'mod.col3.3': 'Податковий календар', 'mod.col3.4': 'Аналітика бізнесу', 'mod.col3.5': 'Квартальні звіти',
+    'mod.col4.title': 'Спеціалізовані', 'mod.col4.1': 'Розклад та записи', 'mod.col4.2': 'Онлайн-бронювання',
+    'mod.col4.3': 'Послуги', 'mod.col4.4': 'Склад', 'mod.col4.5': 'Контент-план (SMM)', 'mod.col4.6': 'Портфоліо', 'mod.col4.7': 'Акаунти соцмереж',
+    'mod.col5.title': 'Команда і безпека', 'mod.col5.1': 'Команда / HR', 'mod.col5.2': 'Персонал',
+    'mod.col5.3': 'Клієнтський портал', 'mod.col5.4': 'Паролі', 'mod.col5.5': 'API та інтеграції', 'mod.col5.6': '2FA (Google Auth)', 'mod.col5.7': 'Підтримка',
+    'how.tag': 'ЯК ЦЕ ПРАЦЮЄ', 'how.title': 'Від встановлення до першого клієнта — 2 хвилини',
+    'how.s1.title': 'Завантаж і встанови', 'how.s1.desc': 'Один .exe файл. Без адмін-прав, без залежностей, без реєстрації. Просто запускаєш і працюєш.',
+    'how.s2.title': 'Обери свою нішу', 'how.s2.desc': 'Фрілансер, IT-агенція, бухгалтер, SMM чи салон краси — нужні модулі підключаться самі.',
+    'how.s3.title': 'Починай працювати', 'how.s3.desc': 'Додай клієнта, виставь рахунок, приймай оплату. Дані синхронізуються в хмарі автоматично.',
+    'pricing.tag': 'ТАРИФИ', 'pricing.title': 'Почни безкоштовно', 'pricing.period': '/міс',
+    'pricing.sub': "Без прив'язки картки. Скасування в один клік. Дані не видаляються.", 'pricing.popular': 'Найпопулярніший',
+    'pricing.free.desc': 'Для старту та ознайомлення', 'pricing.free.1': 'До 50 клієнтів', 'pricing.free.2': 'До 20 рахунків на місяць',
+    'pricing.free.3': 'Базові модулі', 'pricing.free.4': '1 користувач', 'pricing.free.btn': 'Почати безкоштовно',
+    'pricing.pro.desc': 'Для активної роботи', 'pricing.pro.1': 'Необмежено клієнтів і рахунків', 'pricing.pro.2': 'PDF-експорт та email розсилка',
+    'pricing.pro.3': 'Повторювані рахунки', 'pricing.pro.4': 'Нагадування про борги', 'pricing.pro.5': 'Розширена аналітика', 'pricing.pro.6': 'Всі модулі', 'pricing.pro.btn': 'Обрати PRO',
+    'pricing.biz.desc': 'Для команди та кількох бізнесів', 'pricing.biz.1': 'Все з PRO', 'pricing.biz.2': 'Команда до 5 осіб',
+    'pricing.biz.3': 'До 3 окремих бізнесів', 'pricing.biz.4': 'Пріоритетна підтримка', 'pricing.biz.btn': 'Обрати BUSINESS',
+    'faq.tag': 'ПИТАННЯ', 'faq.title': 'Часті запитання',
+    'faq.q1': 'Чим WorkHub відрізняється від звичайної CRM?',
+    'faq.a1': 'WorkHub — це не просто CRM. Це повна робоча область: клієнти, фінанси, каса, зарплата, ПРРО, розклад, команда, документи і аналітика — в одному застосунку. Замість 8–10 окремих сервісів — одне рішення під вашу нішу.',
+    'faq.q2': 'Де зберігаються мої дані?', 'faq.a2': 'Дані синхронізуються через Firebase — вашу приватну хмару. Застосунок працює і офлайн, синхронізується при підключенні. Ви завжди контролюєте свої дані.',
+    'faq.q3': 'Чи потрібен ФОП для роботи?', 'faq.a3': 'Ні. WorkHub можна використовувати як фізособа. Для оплати підписки — картка, Monobank або криптовалюта.',
+    'faq.q4': 'Можна запросити команду?', 'faq.a4': 'Так, на плані BUSINESS — до 5 співробітників за кодом запрошення. Кожному налаштовуєте доступ до потрібних модулів.',
+    'faq.q5': 'Чи є мобільна версія?', 'faq.a5': 'Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.',
+    'faq.q6': 'Як скасувати підписку?', 'faq.a6': 'В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.',
+    'faq.q7': 'Які способи оплати підтримуються?', 'faq.a7': 'Картка через AIFO, Monobank-банка та криптовалюта (USDT, BTC, ETH).',
+    'faq.q8': 'Чи працює ПРРО та фіскалізація?', 'faq.a8': 'Так. Окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів. Плюс податковий календар з автоматичними нагадуваннями про ЄП, ЄСВ і ВЗ.',
+    'cta.title': 'Готовий спробувати?', 'cta.sub': 'Встановлення займає менше хвилини. Безкоштовно, без картки.',
+    'cta.dl_win': 'Завантажити для Windows', 'cta.dl_linux': 'Завантажити для Linux',
+    'footer.copy': '© 2025–2026 Pavlo Turanskyi. Усі права захищені.',
+  },
+
+  ru: {
+    'page.title': 'WorkHub — Рабочая область для вашего бизнеса',
+    'page.desc': 'WorkHub — десктопное приложение, заменяющее 10 отдельных сервисов. Клиенты, финансы, команда, документы, расписание — в одном месте.',
+    'nav.features': 'Возможности', 'nav.pricing': 'Тарифы', 'nav.faq': 'Вопросы', 'nav.download': 'Скачать бесплатно',
+    'hero.badge': 'Десктоп-приложение · Windows · Linux',
+    'hero.title1': 'Ваш бизнес.', 'hero.title2': 'Одна вкладка.',
+    'hero.sub': 'WorkHub — это не CRM и не планировщик. Это полная рабочая область: клиенты, финансы, команда, документы, расписание и аналитика — в одном быстром приложении.',
+    'hero.dl_win': 'Скачать для Windows', 'hero.explore': 'Что внутри →',
+    'hero.trust1': 'Бесплатный план навсегда', 'hero.trust2': 'Данные в вашем облаке', 'hero.trust3': 'Полностью на украинском',
+    'niches.label': 'Для всех кто ведёт своё дело',
+    'niche.freelancer': 'Фрилансеры', 'niche.accountant': 'Бухгалтеры / ФЛП', 'niche.it': 'IT-агентства',
+    'niche.beauty': 'Салоны красоты', 'niche.smm': 'SMM-агентства', 'niche.atelier': 'Ателье / Студии',
+    'features.tag': 'ВОЗМОЖНОСТИ', 'features.title': 'Всё что нужно — уже внутри',
+    'features.sub': '29+ модулей, подключающихся под вашу нишу автоматически. Лишнее — отключается в один клик.',
+    'feat.clients.title': 'Клиенты и воронка продаж',
+    'feat.clients.desc': 'Карточки клиентов, Kanban-воронка от лида до сделки, аналитика по конверсии и доходу. Клиентский портал — клиент видит свои счета онлайн.',
+    'feat.clients.t1': 'Клиенты', 'feat.clients.t2': 'Воронка', 'feat.clients.t3': 'Портал',
+    'feat.finance.title': 'Счета и финансы',
+    'feat.finance.desc': 'PDF-счета, оплата картой или крипто. Повторяющиеся счета — генерируются автоматически. Напоминание клиенту если не оплатил.',
+    'feat.tasks.title': 'Задачи и проекты',
+    'feat.tasks.desc': 'Kanban-доска, дедлайны, приоритеты, таймер рабочего времени. Вставка скриншотов прямо из буфера (Ctrl+V).',
+    'feat.cash.title': 'Касса, банк и зарплата',
+    'feat.cash.desc': 'ПКО/РКО с НДС и акцизом, несколько банковских счётов, начисление зарплаты с автоматическим расчётом НДФЛ и ЕСВ. ПРРО для фискальных чеков и Z-отчётов.',
+    'feat.cash.t1': 'Касса', 'feat.cash.t2': 'Банк', 'feat.cash.t3': 'Зарплата',
+    'feat.booking.title': 'Онлайн-запись для салонов',
+    'feat.booking.desc': 'Клиент сам бронирует время по ссылке. Вы настраиваете рабочие часы и получаете запись в расписании.',
+    'feat.booking.t1': 'Салоны красоты',
+    'feat.team.title': 'Команда и права доступа',
+    'feat.team.desc': 'Приглашай сотрудников, выбирай кому какие модули видны. Учёт персонала, HR-приказы, личные карточки.',
+    'modules.tag': 'МОДУЛИ', 'modules.title': '29+ модулей в одном приложении',
+    'modules.sub': 'Подключаются автоматически под выбранную нишу. Ненужные — отключены по умолчанию.',
+    'mod.col1.title': 'Бизнес и клиенты', 'mod.col1.1': 'Клиенты', 'mod.col1.2': 'Воронка продаж',
+    'mod.col1.3': 'Проекты', 'mod.col1.4': 'Задачи', 'mod.col1.5': 'Таймер', 'mod.col1.6': 'Заметки', 'mod.col1.7': 'Шаблоны документов',
+    'mod.col2.title': 'Финансы', 'mod.col2.1': 'Счета (PDF + email)', 'mod.col2.2': 'Повторяющиеся счета',
+    'mod.col2.3': 'Договоры', 'mod.col2.4': 'Финансы', 'mod.col2.5': 'Касса (ПКО/РКО)', 'mod.col2.6': 'Банк', 'mod.col2.7': 'Конвертер валют', 'mod.col2.8': 'Календарь платежей',
+    'mod.col3.title': 'ФЛП и отчёты', 'mod.col3.1': 'Зарплата (НДФЛ/ЕСВ)', 'mod.col3.3': 'Налоговый календарь', 'mod.col3.4': 'Аналитика бизнеса', 'mod.col3.5': 'Квартальные отчёты',
+    'mod.col4.title': 'Специализированные', 'mod.col4.1': 'Расписание и записи', 'mod.col4.2': 'Онлайн-бронирование',
+    'mod.col4.3': 'Услуги', 'mod.col4.4': 'Склад', 'mod.col4.5': 'Контент-план (SMM)', 'mod.col4.6': 'Портфолио', 'mod.col4.7': 'Аккаунты соцсетей',
+    'mod.col5.title': 'Команда и безопасность', 'mod.col5.1': 'Команда / HR', 'mod.col5.2': 'Персонал',
+    'mod.col5.3': 'Клиентский портал', 'mod.col5.4': 'Пароли', 'mod.col5.5': 'API и интеграции', 'mod.col5.6': '2FA (Google Auth)', 'mod.col5.7': 'Поддержка',
+    'how.tag': 'КАК ЭТО РАБОТАЕТ', 'how.title': 'От установки до первого клиента — 2 минуты',
+    'how.s1.title': 'Скачай и установи', 'how.s1.desc': 'Один .exe файл. Без прав администратора, без зависимостей, без регистрации. Просто запускаешь и работаешь.',
+    'how.s2.title': 'Выбери свою нишу', 'how.s2.desc': 'Фрилансер, IT-агентство, бухгалтер, SMM или салон красоты — нужные модули подключатся сами.',
+    'how.s3.title': 'Начинай работать', 'how.s3.desc': 'Добавь клиента, выставь счёт, принимай оплату. Данные синхронизируются в облаке автоматически.',
+    'pricing.tag': 'ТАРИФЫ', 'pricing.title': 'Начни бесплатно', 'pricing.period': '/мес',
+    'pricing.sub': 'Без привязки карты. Отмена в один клик. Данные не удаляются.', 'pricing.popular': 'Самый популярный',
+    'pricing.free.desc': 'Для старта и знакомства', 'pricing.free.1': 'До 50 клиентов', 'pricing.free.2': 'До 20 счетов в месяц',
+    'pricing.free.3': 'Базовые модули', 'pricing.free.4': '1 пользователь', 'pricing.free.btn': 'Начать бесплатно',
+    'pricing.pro.desc': 'Для активной работы', 'pricing.pro.1': 'Безлимитные клиенты и счета', 'pricing.pro.2': 'PDF-экспорт и email рассылка',
+    'pricing.pro.3': 'Повторяющиеся счета', 'pricing.pro.4': 'Напоминания о долгах', 'pricing.pro.5': 'Расширенная аналитика', 'pricing.pro.6': 'Все модули', 'pricing.pro.btn': 'Выбрать PRO',
+    'pricing.biz.desc': 'Для команды и нескольких бизнесов', 'pricing.biz.1': 'Всё из PRO', 'pricing.biz.2': 'Команда до 5 человек',
+    'pricing.biz.3': 'До 3 отдельных бизнесов', 'pricing.biz.4': 'Приоритетная поддержка', 'pricing.biz.btn': 'Выбрать BUSINESS',
+    'faq.tag': 'ВОПРОСЫ', 'faq.title': 'Частые вопросы',
+    'faq.q1': 'Чем WorkHub отличается от обычной CRM?',
+    'faq.a1': 'WorkHub — это не просто CRM. Это полная рабочая область: клиенты, финансы, касса, зарплата, ПРРО, расписание, команда, документы и аналитика — в одном приложении. Вместо 8–10 отдельных сервисов — одно решение под вашу нишу.',
+    'faq.q2': 'Где хранятся мои данные?', 'faq.a2': 'Данные синхронизируются через Firebase — ваше приватное облако. Приложение работает и офлайн, синхронизируется при подключении. Вы всегда контролируете свои данные.',
+    'faq.q3': 'Нужен ли ФЛП для работы?', 'faq.a3': 'Нет. WorkHub можно использовать как физическое лицо. Для оплаты подписки — карта, Monobank или криптовалюта.',
+    'faq.q4': 'Можно пригласить команду?', 'faq.a4': 'Да, на плане BUSINESS — до 5 сотрудников по коду приглашения. Каждому настраиваете доступ к нужным модулям.',
+    'faq.q5': 'Есть ли мобильная версия?', 'faq.a5': 'Сейчас WorkHub — десктопное приложение для Windows и Linux. Мобильная версия в планах развития.',
+    'faq.q6': 'Как отменить подписку?', 'faq.a6': 'В любой момент через Настройки → Подписка. Аккаунт переходит на FREE план, данные не удаляются.',
+    'faq.q7': 'Какие способы оплаты поддерживаются?', 'faq.a7': 'Карта через AIFO, Monobank и криптовалюта (USDT, BTC, ETH).',
+    'faq.q8': 'Работает ли ПРРО и фискализация?', 'faq.a8': 'Да. Отдельный модуль ПРРО для фискальных чеков, смен и Z-отчётов. Плюс налоговый календарь с автоматическими напоминаниями.',
+    'cta.title': 'Готов попробовать?', 'cta.sub': 'Установка занимает меньше минуты. Бесплатно, без карты.',
+    'cta.dl_win': 'Скачать для Windows', 'cta.dl_linux': 'Скачать для Linux',
+    'footer.copy': '© 2025–2026 Pavlo Turanskyi. Все права защищены.',
+  },
+
+  en: {
+    'page.title': 'WorkHub — The All-in-One Workspace for Your Business',
+    'page.desc': 'WorkHub — a desktop app replacing 10 separate services. Clients, finances, team, documents, schedule — in one place.',
+    'nav.features': 'Features', 'nav.pricing': 'Pricing', 'nav.faq': 'FAQ', 'nav.download': 'Download free',
+    'hero.badge': 'Desktop app · Windows · Linux',
+    'hero.title1': 'Your business.', 'hero.title2': 'One tab.',
+    'hero.sub': 'WorkHub is not a CRM or a planner. It\'s a complete workspace: clients, finances, team, documents, schedule and analytics — in one fast app.',
+    'hero.dl_win': 'Download for Windows', 'hero.explore': 'What\'s inside →',
+    'hero.trust1': 'Free plan forever', 'hero.trust2': 'Data in your cloud', 'hero.trust3': 'Available in Ukrainian',
+    'niches.label': 'For everyone running their own business',
+    'niche.freelancer': 'Freelancers', 'niche.accountant': 'Accountants / FOP', 'niche.it': 'IT Agencies',
+    'niche.beauty': 'Beauty Salons', 'niche.smm': 'SMM Agencies', 'niche.atelier': 'Ateliers / Studios',
+    'features.tag': 'FEATURES', 'features.title': 'Everything you need — already inside',
+    'features.sub': '29+ modules that connect automatically for your niche. Unused ones — disabled by default.',
+    'feat.clients.title': 'Clients & Sales Pipeline',
+    'feat.clients.desc': 'Client cards, Kanban pipeline from lead to deal, conversion and revenue analytics. Client portal — clients see their invoices online.',
+    'feat.clients.t1': 'Clients', 'feat.clients.t2': 'Pipeline', 'feat.clients.t3': 'Portal',
+    'feat.finance.title': 'Invoices & Finances',
+    'feat.finance.desc': 'PDF invoices, card or crypto payments. Recurring invoices generated automatically. Reminders to clients if unpaid.',
+    'feat.tasks.title': 'Tasks & Projects',
+    'feat.tasks.desc': 'Kanban board, deadlines, priorities, work time tracker. Paste screenshots directly from clipboard (Ctrl+V).',
+    'feat.cash.title': 'Cash Register, Bank & Payroll',
+    'feat.cash.desc': 'Cash orders with VAT and excise, multiple bank accounts, payroll with automatic tax calculations. Fiscal receipt module for Z-reports.',
+    'feat.cash.t1': 'Cash', 'feat.cash.t2': 'Bank', 'feat.cash.t3': 'Payroll',
+    'feat.booking.title': 'Online Booking for Salons',
+    'feat.booking.desc': 'Clients book their own time via a link. Set your working hours and get the appointment in your schedule.',
+    'feat.booking.t1': 'Beauty Salons',
+    'feat.team.title': 'Team & Access Control',
+    'feat.team.desc': 'Invite staff, choose who sees which modules. Personnel records, HR orders, employee cards.',
+    'modules.tag': 'MODULES', 'modules.title': '29+ modules in one app',
+    'modules.sub': 'Connected automatically for your chosen niche. Unused ones are off by default.',
+    'mod.col1.title': 'Business & Clients', 'mod.col1.1': 'Clients', 'mod.col1.2': 'Sales Pipeline',
+    'mod.col1.3': 'Projects', 'mod.col1.4': 'Tasks', 'mod.col1.5': 'Timer', 'mod.col1.6': 'Notes', 'mod.col1.7': 'Document Templates',
+    'mod.col2.title': 'Finances', 'mod.col2.1': 'Invoices (PDF + email)', 'mod.col2.2': 'Recurring Invoices',
+    'mod.col2.3': 'Contracts', 'mod.col2.4': 'Finances', 'mod.col2.5': 'Cash Register', 'mod.col2.6': 'Bank', 'mod.col2.7': 'Currency Converter', 'mod.col2.8': 'Payment Calendar',
+    'mod.col3.title': 'Taxes & Reports', 'mod.col3.1': 'Payroll (tax auto-calc)', 'mod.col3.3': 'Tax Calendar', 'mod.col3.4': 'Business Analytics', 'mod.col3.5': 'Quarterly Reports',
+    'mod.col4.title': 'Specialized', 'mod.col4.1': 'Schedule & Appointments', 'mod.col4.2': 'Online Booking',
+    'mod.col4.3': 'Services', 'mod.col4.4': 'Warehouse', 'mod.col4.5': 'Content Plan (SMM)', 'mod.col4.6': 'Portfolio', 'mod.col4.7': 'Social Media Accounts',
+    'mod.col5.title': 'Team & Security', 'mod.col5.1': 'Team / HR', 'mod.col5.2': 'Staff',
+    'mod.col5.3': 'Client Portal', 'mod.col5.4': 'Passwords', 'mod.col5.5': 'API & Integrations', 'mod.col5.6': '2FA (Google Auth)', 'mod.col5.7': 'Support',
+    'how.tag': 'HOW IT WORKS', 'how.title': 'From install to first client — 2 minutes',
+    'how.s1.title': 'Download & Install', 'how.s1.desc': 'One .exe file. No admin rights, no dependencies, no registration. Just launch and start working.',
+    'how.s2.title': 'Choose your niche', 'how.s2.desc': 'Freelancer, IT agency, accountant, SMM or beauty salon — the right modules connect automatically.',
+    'how.s3.title': 'Start working', 'how.s3.desc': 'Add a client, send an invoice, accept payment. Data syncs to the cloud automatically.',
+    'pricing.tag': 'PRICING', 'pricing.title': 'Start for free', 'pricing.period': '/mo',
+    'pricing.sub': 'No credit card required. Cancel anytime. Data is never deleted.', 'pricing.popular': 'Most popular',
+    'pricing.free.desc': 'For getting started', 'pricing.free.1': 'Up to 50 clients', 'pricing.free.2': 'Up to 20 invoices/month',
+    'pricing.free.3': 'Core modules', 'pricing.free.4': '1 user', 'pricing.free.btn': 'Start for free',
+    'pricing.pro.desc': 'For active work', 'pricing.pro.1': 'Unlimited clients & invoices', 'pricing.pro.2': 'PDF export & email delivery',
+    'pricing.pro.3': 'Recurring invoices', 'pricing.pro.4': 'Overdue reminders', 'pricing.pro.5': 'Advanced analytics', 'pricing.pro.6': 'All modules', 'pricing.pro.btn': 'Get PRO',
+    'pricing.biz.desc': 'For teams & multiple businesses', 'pricing.biz.1': 'Everything in PRO', 'pricing.biz.2': 'Team up to 5 people',
+    'pricing.biz.3': 'Up to 3 separate businesses', 'pricing.biz.4': 'Priority support', 'pricing.biz.btn': 'Get BUSINESS',
+    'faq.tag': 'FAQ', 'faq.title': 'Frequently asked questions',
+    'faq.q1': 'How is WorkHub different from a regular CRM?',
+    'faq.a1': 'WorkHub is not just a CRM. It\'s a complete workspace: clients, finances, cash register, payroll, fiscal receipts, scheduling, team, documents and analytics — in one app. Instead of 8–10 separate tools — one solution for your niche.',
+    'faq.q2': 'Where is my data stored?', 'faq.a2': 'Data syncs through Firebase — your private cloud. The app works offline and syncs when connected. You always control your data.',
+    'faq.q3': 'Do I need to be a registered business?', 'faq.a3': 'No. WorkHub can be used as an individual. Payment accepts card, Monobank or cryptocurrency.',
+    'faq.q4': 'Can I invite a team?', 'faq.a4': 'Yes, on the BUSINESS plan — up to 5 employees via invite code. You configure each person\'s module access.',
+    'faq.q5': 'Is there a mobile version?', 'faq.a5': 'Currently WorkHub is a desktop app for Windows and Linux. A mobile version is on the roadmap.',
+    'faq.q6': 'How do I cancel my subscription?', 'faq.a6': 'Anytime via Settings → Subscription. The account reverts to the FREE plan, data is kept.',
+    'faq.q7': 'What payment methods are supported?', 'faq.a7': 'Card via AIFO, Monobank and cryptocurrency (USDT, BTC, ETH).',
+    'faq.q8': 'Does fiscal receipt printing work?', 'faq.a8': 'Yes. A dedicated module for fiscal receipts, shifts and Z-reports. Plus a tax calendar with automatic deadline reminders.',
+    'cta.title': 'Ready to try?', 'cta.sub': 'Installation takes under a minute. Free, no credit card.',
+    'cta.dl_win': 'Download for Windows', 'cta.dl_linux': 'Download for Linux',
+    'footer.copy': '© 2025–2026 Pavlo Turanskyi. All rights reserved.',
+  },
+}
+
+// ── Language engine ────────────────────────────────────────────────────────────
+function applyLang(lang) {
+  const dict = T[lang] || T.uk
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = dict[el.dataset.i18n]
+    if (val !== undefined) el.textContent = val
+  })
+  document.title = dict['page.title'] || document.title
+  const meta = document.querySelector('meta[name="description"]')
+  if (meta && dict['page.desc']) meta.content = dict['page.desc']
+  document.documentElement.lang = lang
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang))
+  localStorage.setItem('wh-lang', lang)
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang))
+})
+
+// Apply saved or browser language on load
+(function () {
+  const saved = localStorage.getItem('wh-lang')
+  const browser = navigator.language?.slice(0, 2)
+  const lang = saved || (['uk','ru','en'].includes(browser) ? browser : 'uk')
+  if (lang !== 'uk') applyLang(lang)
+})()
+
+// ── Scroll reveal ──────────────────────────────────────────────────────────────
 (function scrollReveal() {
   const els = document.querySelectorAll('.section-head, .bento-card, .module-col, .step-item, .price-card, .faq-item');
   els.forEach(el => el.classList.add('reveal'));
@@ -448,6 +689,7 @@
   els.forEach(el => io.observe(el));
 })();
 
+// ── Direct download links from GitHub ─────────────────────────────────────────
 (async function directDownloads() {
   try {
     const res = await fetch('https://api.github.com/repos/Pavlo554/workhub/releases/latest');
@@ -459,7 +701,11 @@
     if (exe) ['dl-win-nav','dl-win-hero','dl-win-cta'].forEach(id => { const el = document.getElementById(id); if (el) el.href = exe.browser_download_url; });
     if (appImage) { const el = document.getElementById('dl-linux-cta'); if (el) el.href = appImage.browser_download_url; }
     const meta = document.getElementById('dl-meta');
-    if (meta && v) meta.textContent = `Версія ${v}${exe ? ' · ' + (exe.size/1024/1024).toFixed(0) + ' МБ' : ''} · безкоштовно`;
+    if (meta && v) {
+      const lang = localStorage.getItem('wh-lang') || 'uk';
+      const period = lang === 'en' ? 'free' : lang === 'ru' ? 'бесплатно' : 'безкоштовно';
+      meta.textContent = `v${v}${exe ? ' · ' + (exe.size/1024/1024).toFixed(0) + ' MB' : ''} · ${period}`;
+    }
   } catch {}
 })();
 </script>
