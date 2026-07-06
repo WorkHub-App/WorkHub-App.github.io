@@ -36,7 +36,7 @@
       <button class="lang-btn" data-lang="ru">RU</button>
       <button class="lang-btn" data-lang="en">EN</button>
     </div>
-    <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav" data-i18n="nav.download">Скачати безкоштовно</a>
+    <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav" data-i18n="nav.download">Скачати безкоштовно</a>
   </div>
 </header>
 
@@ -60,7 +60,7 @@
         WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.
       </p>
       <div class="hero-actions">
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
           <span data-i18n="hero.dl_win">Скачати для Windows</span>
         </a>
@@ -322,7 +322,7 @@
           <li data-i18n="pricing.free.3">Базові модулі</li>
           <li data-i18n="pricing.free.4">1 користувач</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.free.btn">Почати безкоштовно</a>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.free.btn">Почати безкоштовно</a>
       </div>
 
       <div class="price-card price-featured">
@@ -339,7 +339,7 @@
           <li data-i18n="pricing.pro.6">Розширена аналітика</li>
           <li data-i18n="pricing.pro.7">Всі модулі</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-block" data-i18n="pricing.pro.btn">Обрати PRO</a>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-block" data-i18n="pricing.pro.btn">Обрати PRO</a>
       </div>
 
       <div class="price-card">
@@ -352,7 +352,7 @@
           <li data-i18n="pricing.biz.3">До 3 окремих бізнесів</li>
           <li data-i18n="pricing.biz.4">Пріоритетна підтримка</li>
         </ul>
-        <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.biz.btn">Обрати BUSINESS</a>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-outline btn-block" data-i18n="pricing.biz.btn">Обрати BUSINESS</a>
       </div>
 
     </div>
@@ -410,11 +410,11 @@
     <h2 data-i18n="cta.title">Готовий спробувати?</h2>
     <p data-i18n="cta.sub">Встановлення займає менше хвилини. Безкоштовно, без картки.</p>
     <div class="cta-actions">
-      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-primary btn-lg" id="dl-win-cta">
+      <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
         <span data-i18n="cta.dl_win">Завантажити для Windows</span>
       </a>
-      <a href="https://github.com/Pavlo554/workhub/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta" data-i18n="cta.dl_linux">Завантажити для Linux</a>
+      <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta" data-i18n="cta.dl_linux">Завантажити для Linux</a>
     </div>
     <p class="cta-meta" id="dl-meta"></p>
   </div>
@@ -693,7 +693,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 // ── Direct download links from GitHub ─────────────────────────────────────────
 (async function directDownloads() {
   try {
-    const res = await fetch('https://api.github.com/repos/Pavlo554/workhub/releases/latest');
+    const res = await fetch('https://api.github.com/repos/WorkHub-App/workhub-releases/releases/latest');
     if (!res.ok) return;
     const data = await res.json();
     const exe = data.assets?.find(a => /\.exe$/i.test(a.name));
