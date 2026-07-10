@@ -22,6 +22,7 @@
 }
 
 html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 76px; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -408,7 +409,23 @@ h1 {
   .nav-links { display: none; }
   .niche-sep { display: none; }
   .section { padding: 70px 0; }
+  .nav-inner { gap: 12px; }
+  #dl-win-nav { margin-left: auto; }
+  .footer-inner { justify-content: center; text-align: center; }
+  .footer-copy { margin-left: 0; width: 100%; order: 1; }
 }
 @media (max-width: 480px) {
   .module-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 16px; }
+  h1 { font-size: 32px; }
+  .nav-inner { gap: 8px; }
+  .btn-sm { padding: 6px 12px; font-size: 12px; }
+  .nav-inner .lang-switcher { display: none; }
+  .hero { padding: 70px 0 50px; }
+  .hero-badge { font-size: 11px; padding: 4px 11px; }
+  .hero-notice { font-size: 12px; padding: 7px 11px; }
+  .hero-trust { flex-direction: column; align-items: center; gap: 10px; }
+  .price-card { padding: 22px; }
+  .bento-card { padding: 22px; }
+  .step-item { padding: 22px; }
 }
