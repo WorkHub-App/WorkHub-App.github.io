@@ -160,6 +160,13 @@ h1 {
   max-width: 520px; margin-bottom: 36px;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.hero-notice {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 500; color: #F59E0B;
+  background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.25);
+  padding: 8px 14px; border-radius: 9px; margin-bottom: 20px;
+}
+.btn-locked { opacity: .5; cursor: not-allowed; pointer-events: none; }
 .hero-trust {
   display: flex; gap: 22px; flex-wrap: wrap;
   font-size: 13px; color: var(--text-muted);

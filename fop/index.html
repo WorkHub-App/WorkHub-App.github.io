@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkHub для ФОП і бухгалтерів — каса, зарплата, ПРРО та податковий календар</title>
+<meta name="description" content="CRM для ФОП та бухгалтерів: автоматичний розрахунок ЄСВ/ПДФО, каса ПКО/РКО, ПРРО-чеки, податковий календар з дедлайнами. Безкоштовно для старту.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%237C5CFC%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22800%22>W</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">W</div>
+      WorkHub
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Можливості</a>
+      <a href="#pricing">Тарифи</a>
+      <a href="#faq">Питання</a>
+      <a href="../index.html">← Всі ніші</a>
+    </nav>
+    <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-sm" id="dl-win-nav">Скачати безкоштовно</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Для ФОП, бухгалтерів та фінансистів</span>
+      </div>
+      <h1>
+        Ваш ФОП.<br>
+        <span class="grad-text">Без хаосу в звітах.</span>
+      </h1>
+      <p class="hero-sub">
+        WorkHub рахує ЄСВ, ПДФО і ВЗ автоматично, друкує ПРРО-чеки, веде касу з ПКО/РКО і нагадує про кожен податковий дедлайн — щоб ви не гуглили ставки щомісяця.
+      </p>
+      <p class="hero-notice" id="hero-notice">🕐 Застосунок ще готується — реліз 17.07.2026</p>
+      <div class="hero-actions">
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          <span>Скачати для Windows</span>
+        </a>
+        <a href="#features" class="btn btn-ghost btn-lg">Що всередині →</a>
+      </div>
+      <div class="hero-trust">
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Податковий календар щомісяця</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> ЄСВ/ПДФО рахуються самі</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> ПРРО без окремого сервісу</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="mock-window">
+        <div class="mock-bar">
+          <div class="mock-dots"><span></span><span></span><span></span></div>
+          <div class="mock-url">WorkHub — Каса / Зарплата</div>
+        </div>
+        <img src="../photo_2026-06-28_00-09-20.jpg" alt="WorkHub — модуль для ФОП і бухгалтерів" class="mock-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">ДЛЯ ФОП І БУХГАЛТЕРІВ</div>
+      <h2>Все, що зазвичай рахують в Excel — тут рахується само</h2>
+      <p class="section-sub">Каса, зарплата, ПРРО і звітність в одному застосунку, під українське законодавство.</p>
+    </div>
+
+    <div class="features-bento">
+
+      <div class="bento-card bento-wide">
+        <div class="bento-icon" style="color:#38BDF8">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+        </div>
+        <h3>Каса, банк і зарплата</h3>
+        <p>ПКО/РКО з автонумерацією, ПДВ 20% і акциз 5% рахуються живим розрахунком. Нарахування зарплати з автоматичним ПДФО 18%, ВЗ 5% і ЄСВ 22%, пропорційно відпрацьованим дням. Виплата авансу чи ЗП одразу створює РКО в касі.</p>
+        <div class="bento-tags"><span>Каса</span><span>Банк</span><span>Зарплата</span><span>ПРРО</span></div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#F59E0B">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Податковий календар</h3>
+        <p>Дедлайни ЄСВ, ЄП, ПДВ, ПДФО і ВЗ — з нагадуванням заздалегідь. Більше не треба тримати дати в голові чи гуглити щокварталу.</p>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#22C55E">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>ПРРО (Checkbox Ukraine)</h3>
+        <p>Фіскальні чеки, зміни та Z-звіти прямо з застосунку. Без окремого кабінету і додаткової плати за інтеграцію.</p>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon" style="color:#7C5CFC">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Клієнти та рахунки</h3>
+        <p>Реквізити ЄДРПОУ/ІПН, IBAN, юридична адреса — прямо в картці клієнта. PDF-рахунки і договори з вашим бізнес-профілем.</p>
+      </div>
+
+      <div class="bento-card bento-wide">
+        <div class="bento-icon" style="color:#F472B6">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Кадри без окремого HR-сервісу</h3>
+        <p>Особові картки співробітників, накази про прийняття з автонумерацією, звільнення з довідником статей КЗпП — усе одразу друкується в PDF.</p>
+        <div class="bento-tags"><span>HR</span><span>Накази</span><span>Особові картки</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">ЯК ЦЕ ПРАЦЮЄ</div>
+      <h2>Від встановлення до першого звіту — 2 хвилини</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">01</div>
+        <h3>Завантаж і встанови</h3>
+        <p>Один .exe файл. Без адмін-прав, без залежностей, без реєстрації.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">02</div>
+        <h3>Обери нішу «Бухгалтер / ФОП»</h3>
+        <p>Каса, банк, зарплата, ПРРО і податковий календар підключаться автоматично.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">03</div>
+        <h3>Заведи перший ПКО</h3>
+        <p>Або нарахуй зарплату — все одразу порахує податки і створить проведення в касі.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dim" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">ТАРИФИ</div>
+      <h2>Почни безкоштовно</h2>
+      <p class="section-sub">Без прив'язки картки. Скасування в один клік. Дані не видаляються.</p>
+    </div>
+
+    <div class="pricing-row">
+
+      <div class="price-card">
+        <div class="price-tier">FREE</div>
+        <div class="price-amount">₴0<span>/міс</span></div>
+        <p class="price-desc">Для старту та ознайомлення</p>
+        <ul class="price-list">
+          <li>До 50 клієнтів</li>
+          <li>До 20 рахунків на місяць</li>
+          <li>Каса, банк, зарплата</li>
+          <li>1 користувач</li>
+        </ul>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-outline btn-block">Почати безкоштовно</a>
+      </div>
+
+      <div class="price-card price-featured">
+        <div class="price-popular">Найпопулярніший</div>
+        <div class="price-tier" style="color:#7C5CFC">PRO</div>
+        <div class="price-amount">₴299<span>/міс</span></div>
+        <p class="price-desc">Для активної роботи</p>
+        <ul class="price-list">
+          <li>Необмежено клієнтів і рахунків</li>
+          <li>ПРРО та податковий календар</li>
+          <li>Повторювані рахунки</li>
+          <li>Розширена аналітика</li>
+          <li>Всі модулі</li>
+        </ul>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-block">Обрати PRO</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-tier" style="color:#A78BFA">BUSINESS</div>
+        <div class="price-amount">₴799<span>/міс</span></div>
+        <p class="price-desc">Для кількох ФОП або команди</p>
+        <ul class="price-list">
+          <li>Все з PRO</li>
+          <li>Команда до 5 осіб</li>
+          <li>До 3 окремих бізнесів</li>
+          <li>Пріоритетна підтримка</li>
+        </ul>
+        <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-outline btn-block">Обрати BUSINESS</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container container-narrow">
+    <div class="section-head">
+      <div class="section-tag">ПИТАННЯ</div>
+      <h2>Часті запитання</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Чи замінює WorkHub бухгалтера?</summary>
+        <p>Ні, WorkHub не подає звіти в податкову замість вас. Він рахує суми (ЄСВ, ПДФО, ВЗ), веде касу і нагадує про дедлайни — щоб бухгалтеру чи вам самим було на чому будувати звітність, без ручного перерахунку в Excel.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Які податки рахуються автоматично?</summary>
+        <p>ПДФО 18%, військовий збір 5% і ЄСВ 22% при нарахуванні зарплати, а також ПДВ 20% і акциз 5% в касовій книзі, якщо сума їх включає.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чи працює інтеграція з ПРРО?</summary>
+        <p>Так, вбудований модуль ПРРО через Checkbox Ukraine: фіскальні чеки, зміни і Z-звіти прямо з застосунку.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чи можна вести кілька ФОП в одному акаунті?</summary>
+        <p>Так, на плані BUSINESS — до 3 окремих бізнесів з власною касою, клієнтами і звітністю в межах одного акаунту.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Де зберігаються дані?</summary>
+        <p>У Firebase — вашій приватній хмарі. Застосунок працює і офлайн, синхронізується при підключенні до інтернету.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Як скасувати підписку?</summary>
+        <p>В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="container cta-inner">
+    <h2>Готові прибрати хаос у звітах?</h2>
+    <p>Встановлення займає менше хвилини. Безкоштовно, без картки.</p>
+    <div class="cta-actions">
+      <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        <span>Завантажити для Windows</span>
+      </a>
+    </div>
+    <p class="cta-meta" id="dl-meta"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">W</div>
+      WorkHub
+    </a>
+    <p class="footer-copy">© 2025–2026 Pavlo Turanskyi. Усі права захищені.</p>
+    <div class="footer-links">
+      <a href="https://t.me/workhubapp" target="_blank" rel="noopener" title="Telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12s5.15 11.5 11.5 11.5S23.5 18.35 23.5 12 18.35.5 12 .5zm5.4 7.9l-1.9 9.05c-.14.64-.52.79-1.05.49l-2.9-2.14-1.4 1.35c-.16.16-.29.29-.59.29l.21-2.99 5.44-4.92c.24-.21-.05-.33-.36-.12l-6.73 4.24-2.9-.91c-.63-.2-.64-.63.13-.93l11.34-4.37c.52-.19.98.13.71 1.3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/workhub.apps/" target="_blank" rel="noopener" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://github.com/WorkHub-App" target="_blank" rel="noopener" title="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.81-.01 3.19 0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function scrollReveal() {
+  const els = document.querySelectorAll('.section-head, .bento-card, .step-item, .price-card, .faq-item');
+  els.forEach(el => el.classList.add('reveal'));
+  const map = new Map();
+  els.forEach(el => {
+    const p = el.parentElement, i = map.get(p) || 0;
+    el.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
+    map.set(p, i + 1);
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+})();
+
+const LAUNCH_DATE = new Date('2026-07-18T00:00:00+03:00');
+const DL_BTN_IDS = ['dl-win-nav', 'dl-win-hero', 'dl-win-cta'];
+
+function lockDownloads() {
+  DL_BTN_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('btn-locked');
+    el.setAttribute('href', '#');
+    el.addEventListener('click', e => e.preventDefault());
+  });
+}
+
+(async function directDownloads() {
+  if (new Date() < LAUNCH_DATE) { lockDownloads(); return; }
+  const notice = document.getElementById('hero-notice');
+  if (notice) notice.style.display = 'none';
+  try {
+    const res = await fetch('https://api.github.com/repos/WorkHub-App/workhub-releases/releases/latest');
+    if (!res.ok) return;
+    const data = await res.json();
+    const exe = data.assets?.find(a => /\.exe$/i.test(a.name));
+    const v = (data.tag_name || '').replace(/^v/, '');
+    if (exe) DL_BTN_IDS.forEach(id => { const el = document.getElementById(id); if (el) el.href = exe.browser_download_url; });
+    const meta = document.getElementById('dl-meta');
+    if (meta && v) meta.textContent = `v${v}${exe ? ' · ' + (exe.size/1024/1024).toFixed(0) + ' MB' : ''} · безкоштовно`;
+  } catch {}
+})();
+</script>
+</body>
+</html>

@@ -50,7 +50,7 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        <span data-i18n="hero.badge">Десктоп-застосунок · Windows · Linux</span>
+        <span data-i18n="hero.badge">Десктоп-застосунок · Windows</span>
       </div>
       <h1>
         <span data-i18n="hero.title1">Ваш бізнес.</span><br>
@@ -59,6 +59,7 @@
       <p class="hero-sub" data-i18n="hero.sub">
         WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.
       </p>
+      <p class="hero-notice" id="hero-notice" data-i18n="hero.notice">🕐 Застосунок ще готується — реліз 17.07.2026</p>
       <div class="hero-actions">
         <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
@@ -90,30 +91,30 @@
   <div class="container">
     <p class="niches-label" data-i18n="niches.label">Для всіх хто веде власну справу</p>
     <div class="niches-row">
-      <div class="niche">
+      <a class="niche" href="freelance/index.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         <span data-i18n="niche.freelancer">Фрілансери</span>
-      </div>
+      </a>
       <div class="niche-sep"></div>
-      <div class="niche">
+      <a class="niche" href="fop/index.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 3 5-7"/></svg>
         <span data-i18n="niche.accountant">Бухгалтери / ФОП</span>
-      </div>
+      </a>
       <div class="niche-sep"></div>
-      <div class="niche">
+      <a class="niche" href="it/index.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         <span data-i18n="niche.it">IT-агенції</span>
-      </div>
+      </a>
       <div class="niche-sep"></div>
-      <div class="niche">
+      <a class="niche" href="salon/index.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5z"/></svg>
         <span data-i18n="niche.beauty">Салони краси</span>
-      </div>
+      </a>
       <div class="niche-sep"></div>
-      <div class="niche">
+      <a class="niche" href="smm/index.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
         <span data-i18n="niche.smm">SMM-агенції</span>
-      </div>
+      </a>
       <div class="niche-sep"></div>
       <div class="niche">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
@@ -385,7 +386,7 @@
       </details>
       <details class="faq-item">
         <summary data-i18n="faq.q5">Чи є мобільна версія?</summary>
-        <p data-i18n="faq.a5">Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.</p>
+        <p data-i18n="faq.a5">Наразі WorkHub — десктопний застосунок для Windows. Мобільна версія в планах розвитку.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq.q6">Як скасувати підписку?</summary>
@@ -414,7 +415,6 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
         <span data-i18n="cta.dl_win">Завантажити для Windows</span>
       </a>
-      <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-ghost btn-lg" id="dl-linux-cta" data-i18n="cta.dl_linux">Завантажити для Linux</a>
     </div>
     <p class="cta-meta" id="dl-meta"></p>
   </div>
@@ -449,9 +449,10 @@ const T = {
     'page.title': 'WorkHub — Робоча область для вашого бізнесу',
     'page.desc': 'WorkHub — десктопний застосунок що замінює 10 окремих сервісів. Клієнти, фінанси, команда, документи, розклад — в одному місці.',
     'nav.features': 'Можливості', 'nav.pricing': 'Тарифи', 'nav.faq': 'Питання', 'nav.download': 'Скачати безкоштовно',
-    'hero.badge': 'Десктоп-застосунок · Windows · Linux',
+    'hero.badge': 'Десктоп-застосунок · Windows',
     'hero.title1': 'Ваш бізнес.', 'hero.title2': 'Одна вкладка.',
     'hero.sub': 'WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.',
+    'hero.notice': '🕐 Застосунок ще готується — реліз 17.07.2026',
     'hero.dl_win': 'Скачати для Windows', 'hero.explore': 'Що всередині →',
     'hero.trust1': 'Безкоштовний план назавжди', 'hero.trust2': 'Дані у вашій хмарі', 'hero.trust3': 'Повністю українською',
     'niches.label': 'Для всіх хто веде власну справу',
@@ -503,12 +504,12 @@ const T = {
     'faq.q2': 'Де зберігаються мої дані?', 'faq.a2': 'Дані синхронізуються через Firebase — вашу приватну хмару. Застосунок працює і офлайн, синхронізується при підключенні. Ви завжди контролюєте свої дані.',
     'faq.q3': 'Чи потрібен ФОП для роботи?', 'faq.a3': 'Ні. WorkHub можна використовувати як фізособа. Для оплати підписки — картка, Monobank або криптовалюта.',
     'faq.q4': 'Можна запросити команду?', 'faq.a4': 'Так, на плані BUSINESS — до 5 співробітників за кодом запрошення. Кожному налаштовуєте доступ до потрібних модулів.',
-    'faq.q5': 'Чи є мобільна версія?', 'faq.a5': 'Наразі WorkHub — десктопний застосунок для Windows і Linux. Мобільна версія в планах розвитку.',
+    'faq.q5': 'Чи є мобільна версія?', 'faq.a5': 'Наразі WorkHub — десктопний застосунок для Windows. Мобільна версія в планах розвитку.',
     'faq.q6': 'Як скасувати підписку?', 'faq.a6': 'В будь-який момент через Налаштування → Підписка. Акаунт переходить на FREE план, дані не видаляються.',
     'faq.q7': 'Які способи оплати підтримуються?', 'faq.a7': 'Картка через AIFO, Monobank-банка та криптовалюта (USDT, BTC, ETH).',
     'faq.q8': 'Чи працює ПРРО та фіскалізація?', 'faq.a8': 'Так. Окремий модуль ПРРО для фіскальних чеків, змін та Z-звітів. Плюс податковий календар з автоматичними нагадуваннями про ЄП, ЄСВ і ВЗ.',
     'cta.title': 'Готовий спробувати?', 'cta.sub': 'Встановлення займає менше хвилини. Безкоштовно, без картки.',
-    'cta.dl_win': 'Завантажити для Windows', 'cta.dl_linux': 'Завантажити для Linux',
+    'cta.dl_win': 'Завантажити для Windows',
     'footer.copy': '© 2025–2026 Pavlo Turanskyi. Усі права захищені.',
   },
 
@@ -516,9 +517,10 @@ const T = {
     'page.title': 'WorkHub — Рабочая область для вашего бизнеса',
     'page.desc': 'WorkHub — десктопное приложение, заменяющее 10 отдельных сервисов. Клиенты, финансы, команда, документы, расписание — в одном месте.',
     'nav.features': 'Возможности', 'nav.pricing': 'Тарифы', 'nav.faq': 'Вопросы', 'nav.download': 'Скачать бесплатно',
-    'hero.badge': 'Десктоп-приложение · Windows · Linux',
+    'hero.badge': 'Десктоп-приложение · Windows',
     'hero.title1': 'Ваш бизнес.', 'hero.title2': 'Одна вкладка.',
     'hero.sub': 'WorkHub — это не CRM и не планировщик. Это полная рабочая область: клиенты, финансы, команда, документы, расписание и аналитика — в одном быстром приложении.',
+    'hero.notice': '🕐 Приложение ещё готовится — релиз 17.07.2026',
     'hero.dl_win': 'Скачать для Windows', 'hero.explore': 'Что внутри →',
     'hero.trust1': 'Бесплатный план навсегда', 'hero.trust2': 'Данные в вашем облаке', 'hero.trust3': 'Полностью на украинском',
     'niches.label': 'Для всех кто ведёт своё дело',
@@ -570,12 +572,12 @@ const T = {
     'faq.q2': 'Где хранятся мои данные?', 'faq.a2': 'Данные синхронизируются через Firebase — ваше приватное облако. Приложение работает и офлайн, синхронизируется при подключении. Вы всегда контролируете свои данные.',
     'faq.q3': 'Нужен ли ФЛП для работы?', 'faq.a3': 'Нет. WorkHub можно использовать как физическое лицо. Для оплаты подписки — карта, Monobank или криптовалюта.',
     'faq.q4': 'Можно пригласить команду?', 'faq.a4': 'Да, на плане BUSINESS — до 5 сотрудников по коду приглашения. Каждому настраиваете доступ к нужным модулям.',
-    'faq.q5': 'Есть ли мобильная версия?', 'faq.a5': 'Сейчас WorkHub — десктопное приложение для Windows и Linux. Мобильная версия в планах развития.',
+    'faq.q5': 'Есть ли мобильная версия?', 'faq.a5': 'Сейчас WorkHub — десктопное приложение для Windows. Мобильная версия в планах развития.',
     'faq.q6': 'Как отменить подписку?', 'faq.a6': 'В любой момент через Настройки → Подписка. Аккаунт переходит на FREE план, данные не удаляются.',
     'faq.q7': 'Какие способы оплаты поддерживаются?', 'faq.a7': 'Карта через AIFO, Monobank и криптовалюта (USDT, BTC, ETH).',
     'faq.q8': 'Работает ли ПРРО и фискализация?', 'faq.a8': 'Да. Отдельный модуль ПРРО для фискальных чеков, смен и Z-отчётов. Плюс налоговый календарь с автоматическими напоминаниями.',
     'cta.title': 'Готов попробовать?', 'cta.sub': 'Установка занимает меньше минуты. Бесплатно, без карты.',
-    'cta.dl_win': 'Скачать для Windows', 'cta.dl_linux': 'Скачать для Linux',
+    'cta.dl_win': 'Скачать для Windows',
     'footer.copy': '© 2025–2026 Pavlo Turanskyi. Все права защищены.',
   },
 
@@ -583,9 +585,10 @@ const T = {
     'page.title': 'WorkHub — The All-in-One Workspace for Your Business',
     'page.desc': 'WorkHub — a desktop app replacing 10 separate services. Clients, finances, team, documents, schedule — in one place.',
     'nav.features': 'Features', 'nav.pricing': 'Pricing', 'nav.faq': 'FAQ', 'nav.download': 'Download free',
-    'hero.badge': 'Desktop app · Windows · Linux',
+    'hero.badge': 'Desktop app · Windows',
     'hero.title1': 'Your business.', 'hero.title2': 'One tab.',
     'hero.sub': 'WorkHub is not a CRM or a planner. It\'s a complete workspace: clients, finances, team, documents, schedule and analytics — in one fast app.',
+    'hero.notice': '🕐 The app is still in progress — launching 07/17/2026',
     'hero.dl_win': 'Download for Windows', 'hero.explore': 'What\'s inside →',
     'hero.trust1': 'Free plan forever', 'hero.trust2': 'Data in your cloud', 'hero.trust3': 'Available in Ukrainian',
     'niches.label': 'For everyone running their own business',
@@ -637,12 +640,12 @@ const T = {
     'faq.q2': 'Where is my data stored?', 'faq.a2': 'Data syncs through Firebase — your private cloud. The app works offline and syncs when connected. You always control your data.',
     'faq.q3': 'Do I need to be a registered business?', 'faq.a3': 'No. WorkHub can be used as an individual. Payment accepts card, Monobank or cryptocurrency.',
     'faq.q4': 'Can I invite a team?', 'faq.a4': 'Yes, on the BUSINESS plan — up to 5 employees via invite code. You configure each person\'s module access.',
-    'faq.q5': 'Is there a mobile version?', 'faq.a5': 'Currently WorkHub is a desktop app for Windows and Linux. A mobile version is on the roadmap.',
+    'faq.q5': 'Is there a mobile version?', 'faq.a5': 'Currently WorkHub is a desktop app for Windows. A mobile version is on the roadmap.',
     'faq.q6': 'How do I cancel my subscription?', 'faq.a6': 'Anytime via Settings → Subscription. The account reverts to the FREE plan, data is kept.',
     'faq.q7': 'What payment methods are supported?', 'faq.a7': 'Card via AIFO, Monobank and cryptocurrency (USDT, BTC, ETH).',
     'faq.q8': 'Does fiscal receipt printing work?', 'faq.a8': 'Yes. A dedicated module for fiscal receipts, shifts and Z-reports. Plus a tax calendar with automatic deadline reminders.',
     'cta.title': 'Ready to try?', 'cta.sub': 'Installation takes under a minute. Free, no credit card.',
-    'cta.dl_win': 'Download for Windows', 'cta.dl_linux': 'Download for Linux',
+    'cta.dl_win': 'Download for Windows',
     'footer.copy': '© 2025–2026 Pavlo Turanskyi. All rights reserved.',
   },
 }
@@ -690,17 +693,31 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   els.forEach(el => io.observe(el));
 })();
 
-// ── Direct download links from GitHub ─────────────────────────────────────────
+// ── Launch gate: app not downloadable until 17.07.2026 ────────────────────────
+const LAUNCH_DATE = new Date('2026-07-18T00:00:00+03:00');
+const DL_BTN_IDS = ['dl-win-nav', 'dl-win-hero', 'dl-win-cta'];
+
+function lockDownloads() {
+  DL_BTN_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add('btn-locked');
+    el.setAttribute('href', '#');
+    el.addEventListener('click', e => e.preventDefault());
+  });
+}
+
 (async function directDownloads() {
+  if (new Date() < LAUNCH_DATE) { lockDownloads(); return; }
+  const notice = document.getElementById('hero-notice');
+  if (notice) notice.style.display = 'none';
   try {
     const res = await fetch('https://api.github.com/repos/WorkHub-App/workhub-releases/releases/latest');
     if (!res.ok) return;
     const data = await res.json();
     const exe = data.assets?.find(a => /\.exe$/i.test(a.name));
-    const appImage = data.assets?.find(a => /\.AppImage$/i.test(a.name));
     const v = (data.tag_name || '').replace(/^v/, '');
-    if (exe) ['dl-win-nav','dl-win-hero','dl-win-cta'].forEach(id => { const el = document.getElementById(id); if (el) el.href = exe.browser_download_url; });
-    if (appImage) { const el = document.getElementById('dl-linux-cta'); if (el) el.href = appImage.browser_download_url; }
+    if (exe) DL_BTN_IDS.forEach(id => { const el = document.getElementById(id); if (el) el.href = exe.browser_download_url; });
     const meta = document.getElementById('dl-meta');
     if (meta && v) {
       const lang = localStorage.getItem('wh-lang') || 'uk';
