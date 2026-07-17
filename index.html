@@ -59,7 +59,6 @@
       <p class="hero-sub" data-i18n="hero.sub">
         WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.
       </p>
-      <p class="hero-notice" id="hero-notice" data-i18n="hero.notice">🕐 Застосунок ще готується — реліз 17.07.2026</p>
       <div class="hero-actions">
         <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
@@ -452,7 +451,6 @@ const T = {
     'hero.badge': 'Десктоп-застосунок · Windows',
     'hero.title1': 'Ваш бізнес.', 'hero.title2': 'Одна вкладка.',
     'hero.sub': 'WorkHub — це не CRM і не планувальник. Це повна робоча область: клієнти, фінанси, команда, документи, розклад і аналітика — в одному швидкому застосунку.',
-    'hero.notice': '🕐 Застосунок ще готується — реліз 17.07.2026',
     'hero.dl_win': 'Скачати для Windows', 'hero.explore': 'Що всередині →',
     'hero.trust1': 'Безкоштовний план назавжди', 'hero.trust2': 'Дані у вашій хмарі', 'hero.trust3': 'Повністю українською',
     'niches.label': 'Для всіх хто веде власну справу',
@@ -520,7 +518,6 @@ const T = {
     'hero.badge': 'Десктоп-приложение · Windows',
     'hero.title1': 'Ваш бизнес.', 'hero.title2': 'Одна вкладка.',
     'hero.sub': 'WorkHub — это не CRM и не планировщик. Это полная рабочая область: клиенты, финансы, команда, документы, расписание и аналитика — в одном быстром приложении.',
-    'hero.notice': '🕐 Приложение ещё готовится — релиз 17.07.2026',
     'hero.dl_win': 'Скачать для Windows', 'hero.explore': 'Что внутри →',
     'hero.trust1': 'Бесплатный план навсегда', 'hero.trust2': 'Данные в вашем облаке', 'hero.trust3': 'Полностью на украинском',
     'niches.label': 'Для всех кто ведёт своё дело',
@@ -588,7 +585,6 @@ const T = {
     'hero.badge': 'Desktop app · Windows',
     'hero.title1': 'Your business.', 'hero.title2': 'One tab.',
     'hero.sub': 'WorkHub is not a CRM or a planner. It\'s a complete workspace: clients, finances, team, documents, schedule and analytics — in one fast app.',
-    'hero.notice': '🕐 The app is still in progress — launching 07/17/2026',
     'hero.dl_win': 'Download for Windows', 'hero.explore': 'What\'s inside →',
     'hero.trust1': 'Free plan forever', 'hero.trust2': 'Data in your cloud', 'hero.trust3': 'Available in Ukrainian',
     'niches.label': 'For everyone running their own business',
@@ -693,24 +689,10 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   els.forEach(el => io.observe(el));
 })();
 
-// ── Launch gate: app not downloadable until 17.07.2026 ────────────────────────
-const LAUNCH_DATE = new Date('2026-07-18T00:00:00+03:00');
+// ── Direct download links from GitHub ─────────────────────────────────────────
 const DL_BTN_IDS = ['dl-win-nav', 'dl-win-hero', 'dl-win-cta'];
 
-function lockDownloads() {
-  DL_BTN_IDS.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.add('btn-locked');
-    el.setAttribute('href', '#');
-    el.addEventListener('click', e => e.preventDefault());
-  });
-}
-
 (async function directDownloads() {
-  if (new Date() < LAUNCH_DATE) { lockDownloads(); return; }
-  const notice = document.getElementById('hero-notice');
-  if (notice) notice.style.display = 'none';
   try {
     const res = await fetch('https://api.github.com/repos/WorkHub-App/workhub-releases/releases/latest');
     if (!res.ok) return;

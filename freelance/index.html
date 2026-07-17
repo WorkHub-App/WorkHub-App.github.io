@@ -47,7 +47,6 @@
       <p class="hero-sub">
         Виставляй PDF-рахунок за 30 секунд, веди проекти з таймером часу, зберігай клієнтів і паролі в одному застосунку — замість п'яти окремих сервісів і купи вкладок у браузері.
       </p>
-      <p class="hero-notice" id="hero-notice">🕐 Застосунок ще готується — реліз 17.07.2026</p>
       <div class="hero-actions">
         <a href="https://github.com/WorkHub-App/workhub-releases/releases/latest" class="btn btn-primary btn-lg" id="dl-win-hero">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
@@ -300,23 +299,9 @@
   els.forEach(el => io.observe(el));
 })();
 
-const LAUNCH_DATE = new Date('2026-07-18T00:00:00+03:00');
 const DL_BTN_IDS = ['dl-win-nav', 'dl-win-hero', 'dl-win-cta'];
 
-function lockDownloads() {
-  DL_BTN_IDS.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.add('btn-locked');
-    el.setAttribute('href', '#');
-    el.addEventListener('click', e => e.preventDefault());
-  });
-}
-
 (async function directDownloads() {
-  if (new Date() < LAUNCH_DATE) { lockDownloads(); return; }
-  const notice = document.getElementById('hero-notice');
-  if (notice) notice.style.display = 'none';
   try {
     const res = await fetch('https://api.github.com/repos/WorkHub-App/workhub-releases/releases/latest');
     if (!res.ok) return;
